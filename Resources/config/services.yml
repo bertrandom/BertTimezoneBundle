@@ -1,0 +1,9 @@
+parameters:
+    bert.timezone.default: 'America/Los_Angeles'
+
+services:
+    bert.timezone.twig.extension:
+        class: Bert\TimezoneBundle\Extension\TimezoneTwigExtension
+        arguments: [%bert.timezone.default%]
+        tags:
+            -  { name: twig.extension }

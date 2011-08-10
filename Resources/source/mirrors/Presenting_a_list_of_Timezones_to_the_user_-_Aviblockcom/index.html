@@ -1,0 +1,1469 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+<title>Presenting a list of Timezones to the user | Aviblock.com</title>
+
+<link rel="alternate" type="application/rss+xml" title="Aviblock.com RSS Feed" href="http://www.aviblock.com/blog/feed/">
+<link rel="alternate" type="application/atom+xml" title="Aviblock.com Atom Feed" href="http://www.aviblock.com/blog/feed/atom/">
+<link rel="pingback" href="http://www.aviblock.com/blog/xmlrpc.php">
+
+
+<!--[if lte IE 6]>
+<script type="text/javascript">
+/* <![CDATA[ */
+   blankimgpath = 'http://www.aviblock.com/blog/wp-content/themes/fusion/images/blank.gif';
+ /* ]]> */
+</script>
+<style type="text/css" media="screen">
+  @import "http://www.aviblock.com/blog/wp-content/themes/fusion/ie6.css";
+  body{ behavior:url("http://www.aviblock.com/blog/wp-content/themes/fusion/js/ie6hoverfix.htc"); }
+  img{ behavior: url("http://www.aviblock.com/blog/wp-content/themes/fusion/js/ie6pngfix.htc"); }
+</style>
+<![endif]-->
+
+
+  
+<link rel="alternate" type="application/rss+xml" title="Aviblock.com » Presenting a list of Timezones to the user Comments Feed" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/feed/">
+
+
+
+
+
+
+
+
+
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.aviblock.com/blog/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.aviblock.com/blog/wp-includes/wlwmanifest.xml"> 
+<link rel="index" title="Aviblock.com" href="http://www.aviblock.com/blog/">
+<link rel="start" title="Presenting a list of Timezones to the user" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/">
+<link rel="next" title="ACL in Zend Framework" href="http://www.aviblock.com/blog/2009/03/19/acl-in-zend-framework/">
+<meta name="generator" content="WordPress 3.0.4">
+<link rel="shortlink" href="http://www.aviblock.com/blog/?p=3">
+
+<!-- All in One SEO Pack 1.6.13 by Michael Torbert of Semper Fi Web Design[307,377] -->
+<meta name="description" content="&nbsp; I first got into timezones when I working on an calendar app which displayed various times of day which are pertinent to Jewish daily life. The app would">
+<link rel="canonical" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/">
+<!-- /all in one seo pack -->
+<link id="MediaRSS" rel="alternate" type="application/rss+xml" title="NextGEN Gallery RSS Feed" href="http://www.aviblock.com/blog/wp-content/plugins/nextgen-gallery/xml/media-rss.php">
+
+<!-- NextGeEN Gallery CoolIris/PicLens support -->
+
+<!-- /NextGEN Gallery CoolIris/PicLens support -->
+<meta name="NextGEN" content="1.5.3">
+<!-- Google Analytics Tracking by Google Analyticator 6.1.1: http://ronaldheft.com/code/analyticator/ -->
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="index.css" media="all">
+</head>
+<body class="presenting-a-list-of-timezones-to-the-user">
+  <!-- page wrappers (100% width) -->
+  <div id="page-wrap1">
+    <div id="page-wrap2">
+      <!-- page (actual site content, custom width) -->
+      <div id="page" class="with-sidebar">
+
+       <!-- main wrapper (side & main) -->
+       <div id="main-wrap">
+        <!-- mid column wrap -->
+    	<div id="mid-wrap">
+          <!-- sidebar wrap -->
+          <div id="side-wrap">
+            <!-- mid column -->
+    	    <div id="mid">
+              <!-- header -->
+              <div id="header">
+                <div id="topnav" class="description"> My musings on web development</div>
+
+                <h1 id="title"><a href="http://www.aviblock.com/blog/">Aviblock.com</a></h1>                <!-- top tab navigation -->
+                <div id="tabs">
+                 <ul>
+                                   <li><a href="http://www.aviblock.com/blog" title="Click for Home"><span><span>Home</span></span></a></li>
+                                  <li class="page_item page-item-2"><a href="http://www.aviblock.com/blog/about/" title="About"><span><span>About</span></span></a></li>
+                 </ul>
+                </div>
+                <!-- /top tabs -->
+
+              </div><!-- /header -->
+
+  <!-- mid content -->
+  <div id="mid-content">
+      <div class="navigation">
+      <div class="alignleft"></div>
+      <div class="alignright"><a href="http://www.aviblock.com/blog/2009/03/19/acl-in-zend-framework/" rel="next">ACL in Zend Framework</a> »</div>
+      <div class="clear"></div>
+    </div>
+
+        <div id="post-3" class="post-3 post type-post hentry category-programming tag-expression-engine tag-php tag-timezones tag-usability">
+           <h2>Presenting a list of Timezones to the user</h2>       <br>
+	   <div class="entry">
+          <div class="postbody entry clearfix">
+	       <p>&nbsp;</p>
+<p>I first got into timezones when I working on an <a title="OU Calendar Application" href="http://www.ou.org/holidays/calendar" target="_top">calendar app</a> which displayed various times of day which are pertinent to Jewish daily life. The app would display calculated times which of course would differ based on the timezone of the given location. As I investigated into timezones, I found them to be fairly complicated. Not all timezones are even on the hour…some are at 30 minute offsets, some at 45 minutes, and historically there have been even stranger offsets than that.</p>
+<p>To make matters worse, there’s the whole issue of Daylight Saving Time. Apparently some places have it some don’t. Some countries have a set date for DST, some pick a new one each year depending on circumstances. And of course, DST does not mean only adding one hour.&nbsp;<br>
+<span id="more-3"></span><br>
+My research led me to what is “colloquially” known as the <a title="Olson Database" href="http://www.twinsun.com/tz/tz-link.htm" target="_top">“Olson” database</a>. The Olson database is a <a href="http://article.gmane.org/gmane.comp.time.tz/2496" target="_top">de facto standard</a>&nbsp;in the world of keeping time. The most recognizable part of the way timezones are identified is the {Continent}/{Location} signature. For example, the timezone that I am in is called “America/New_York”. The Olson database tracks all historical information about timezones back at least until 1970. By timezone information, this also means transitions for DST and the GMT offset for both standard time and DST.</p>
+<p>The best part of all of this, is that PHP 5 and up has <a title="PHP Support's Timezones" href="http://www.php.net/timezones" target="_top">built in support</a> for understanding Olson timezones. This means that you all you need is the timezone id (the tzid), and you can have PHP worry about all the timezone and DST calculations.</p>
+<p>Recently, I was working on another app which required members to select a timezone. The app is written on top of <a title="Expression Engine" href="http://www.expressionengine.com/" target="_top">Expression Engine</a>&nbsp;which contains a full blown membership system. The membership system includes a timezone setting. Let’s take a quick look at the what this look like:</p>
+<div id="attachment_9" class="wp-caption alignnone" style="width: 1034px;"><img class="size-large wp-image-9" title="Screenshot of timezone selection from Expression Engine" src="ss121-1024x350.png" alt="Selecting a timezone in Expression Engine" height="350" width="1024"><p class="wp-caption-text">Selecting a timezone in Expression Engine</p></div>
+<p>Notice the checkbox that says “Daylight Saving Time”? This means that the user has to remember, every year, to select that checkbox when DST happens. Not very fun. Expression Engine is written in PHP 4, and the authors <a title="Expression Engine to stay supporting PHP4" href="http://expressionengine.com/blog/entry/i_see_dead_server_side_scripting_languages/" target="_top">intend to keep that</a>, stubbornly, for as long as possible.</p>
+<p>I’m not here to wrant on Expression Engine (that’s for another time), but either way, this would not suit my purposes. I can’t rely on users remembering to “spring forward” when they have to.</p>
+<p>The alternative is to provide a list based on the Olson database. The problem is that, as of this post, their are 560 tzid’s in the database, and they are not “friendly” nor recognizable to anybody but geeks.&nbsp;</p>
+<p>I started looking around on the Interwebs trying to see what other people came up with. There was a <a href="http://stackoverflow.com/questions/119672/how-would-you-organize-a-timezone-dropdown" target="_top">question</a> on <a title="stackoverflow.com" href="http://www.stackoverflow.com/" target="_top">Stackoverflow.com</a>&nbsp;which hit the nail on the head, but anybody answering the question missed the point completely.</p>
+<p>Eventually I realized that I must present a list similar to Expression Engine’s list, but which has the values as Olson tzid’s. The first step was to clean up the list a little. Much of the information is redundant, and only there for historical purposes. For instance, until 2006, much of <a href="http://www.mccsc.edu/time.html" target="_top">Indiana did not observe DST.</a>&nbsp;After 2006, however, the story changed. This explains why there are so many Olson tzid’s with Indiana in them. However, for all practical purposes, they’re the same.</p>
+<p>The question is, what defines them as the same? I determined the best way would be to look at the DST transition date (if applicable), and the resulting offsets and compare them. Fortunately, PHP has a function that does this…<a href="http://us.php.net/manual/en/function.timezone-transitions-get.php" target="_top">timezone_transitions_get()</a>.</p>
+<p>My idea was to pull in all the timezones and their transistions into excel and sort them by offset, and transition dates to identify which tzids are similar. After that, to figure out a friendly name to call them.</p>
+<p>Doing more research I found somebody made a <a title="spreadsheet for timezones" href="http://www.timdavis.com.au/data/olson-time-zone-database-to-standard-windows-time-zone-v01/" target="_top">spreadsheet</a> which tried to map Windows timezone names to Olson tzid’s. I used this a base reference for the names I chose, although I found not all the data in that spreadsheet was accurate (one day I will submit my changes to the author). Some timezones I had to come up with my own names like “America/Havana” which has different rules for any place in its timezone. I decided to call this&nbsp;(GMT-05:00) Cuba for lack of anything else.</p>
+<p>In the end, I came up with a list of about 80 or so timezones, and I’m somewhat proud of my results:</p>
+<p>Here is the list:</p>
+<pre lang="HTML"><option value="Pacific/Midway">(GMT-11:00) Midway Island, Samoa</option>
+<option value="America/Adak">(GMT-10:00) Hawaii-Aleutian</option>
+<option value="Etc/GMT+10">(GMT-10:00) Hawaii</option>
+<option value="Pacific/Marquesas">(GMT-09:30) Marquesas Islands</option>
+<option value="Pacific/Gambier">(GMT-09:00) Gambier Islands</option>
+<option value="America/Anchorage">(GMT-09:00) Alaska</option>
+<option value="America/Ensenada">(GMT-08:00) Tijuana, Baja California</option>
+<option value="Etc/GMT+8">(GMT-08:00) Pitcairn Islands</option>
+<option value="America/Los_Angeles">(GMT-08:00) Pacific Time (US &amp; Canada)</option>
+<option value="America/Denver">(GMT-07:00) Mountain Time (US &amp; Canada)</option>
+<option value="America/Chihuahua">(GMT-07:00) Chihuahua, La Paz, Mazatlan</option>
+<option value="America/Dawson_Creek">(GMT-07:00) Arizona</option>
+<option value="America/Belize">(GMT-06:00) Saskatchewan, Central America</option>
+<option value="America/Cancun">(GMT-06:00) Guadalajara, Mexico City, Monterrey</option>
+<option value="Chile/EasterIsland">(GMT-06:00) Easter Island</option>
+<option value="America/Chicago">(GMT-06:00) Central Time (US &amp; Canada)</option>
+<option value="America/New_York">(GMT-05:00) Eastern Time (US &amp; Canada)</option>
+<option value="America/Havana">(GMT-05:00) Cuba</option>
+<option value="America/Bogota">(GMT-05:00) Bogota, Lima, Quito, Rio Branco</option>
+<option value="America/Caracas">(GMT-04:30) Caracas</option>
+<option value="America/Santiago">(GMT-04:00) Santiago</option>
+<option value="America/La_Paz">(GMT-04:00) La Paz</option>
+<option value="Atlantic/Stanley">(GMT-04:00) Faukland Islands</option>
+<option value="America/Campo_Grande">(GMT-04:00) Brazil</option>
+<option value="America/Goose_Bay">(GMT-04:00) Atlantic Time (Goose Bay)</option>
+<option value="America/Glace_Bay">(GMT-04:00) Atlantic Time (Canada)</option>
+<option value="America/St_Johns">(GMT-03:30) Newfoundland</option>
+<option value="America/Araguaina">(GMT-03:00) UTC-3</option>
+<option value="America/Montevideo">(GMT-03:00) Montevideo</option>
+<option value="America/Miquelon">(GMT-03:00) Miquelon, St. Pierre</option>
+<option value="America/Godthab">(GMT-03:00) Greenland</option>
+<option value="America/Argentina/Buenos_Aires">(GMT-03:00) Buenos Aires</option>
+<option value="America/Sao_Paulo">(GMT-03:00) Brasilia</option>
+<option value="America/Noronha">(GMT-02:00) Mid-Atlantic</option>
+<option value="Atlantic/Cape_Verde">(GMT-01:00) Cape Verde Is.</option>
+<option value="Atlantic/Azores">(GMT-01:00) Azores</option>
+<option value="Europe/Belfast">(GMT) Greenwich Mean Time : Belfast</option>
+<option value="Europe/Dublin">(GMT) Greenwich Mean Time : Dublin</option>
+<option value="Europe/Lisbon">(GMT) Greenwich Mean Time : Lisbon</option>
+<option value="Europe/London">(GMT) Greenwich Mean Time : London</option>
+<option value="Africa/Abidjan">(GMT) Monrovia, Reykjavik</option>
+<option value="Europe/Amsterdam">(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+<option value="Europe/Belgrade">(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+<option value="Europe/Brussels">(GMT+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+<option value="Africa/Algiers">(GMT+01:00) West Central Africa</option>
+<option value="Africa/Windhoek">(GMT+01:00) Windhoek</option>
+<option value="Asia/Beirut">(GMT+02:00) Beirut</option>
+<option value="Africa/Cairo">(GMT+02:00) Cairo</option>
+<option value="Asia/Gaza">(GMT+02:00) Gaza</option>
+<option value="Africa/Blantyre">(GMT+02:00) Harare, Pretoria</option>
+<option value="Asia/Jerusalem">(GMT+02:00) Jerusalem</option>
+<option value="Europe/Minsk">(GMT+02:00) Minsk</option>
+<option value="Asia/Damascus">(GMT+02:00) Syria</option>
+<option value="Europe/Moscow">(GMT+03:00) Moscow, St. Petersburg, Volgograd</option>
+<option value="Africa/Addis_Ababa">(GMT+03:00) Nairobi</option>
+<option value="Asia/Tehran">(GMT+03:30) Tehran</option>
+<option value="Asia/Dubai">(GMT+04:00) Abu Dhabi, Muscat</option>
+<option value="Asia/Yerevan">(GMT+04:00) Yerevan</option>
+<option value="Asia/Kabul">(GMT+04:30) Kabul</option>
+<option value="Asia/Yekaterinburg">(GMT+05:00) Ekaterinburg</option>
+<option value="Asia/Tashkent">(GMT+05:00) Tashkent</option>
+<option value="Asia/Kolkata">(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+<option value="Asia/Katmandu">(GMT+05:45) Kathmandu</option>
+<option value="Asia/Dhaka">(GMT+06:00) Astana, Dhaka</option>
+<option value="Asia/Novosibirsk">(GMT+06:00) Novosibirsk</option>
+<option value="Asia/Rangoon">(GMT+06:30) Yangon (Rangoon)</option>
+<option value="Asia/Bangkok">(GMT+07:00) Bangkok, Hanoi, Jakarta</option>
+<option value="Asia/Krasnoyarsk">(GMT+07:00) Krasnoyarsk</option>
+<option value="Asia/Hong_Kong">(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
+<option value="Asia/Irkutsk">(GMT+08:00) Irkutsk, Ulaan Bataar</option>
+<option value="Australia/Perth">(GMT+08:00) Perth</option>
+<option value="Australia/Eucla">(GMT+08:45) Eucla</option>
+<option value="Asia/Tokyo">(GMT+09:00) Osaka, Sapporo, Tokyo</option>
+<option value="Asia/Seoul">(GMT+09:00) Seoul</option>
+<option value="Asia/Yakutsk">(GMT+09:00) Yakutsk</option>
+<option value="Australia/Adelaide">(GMT+09:30) Adelaide</option>
+<option value="Australia/Darwin">(GMT+09:30) Darwin</option>
+<option value="Australia/Brisbane">(GMT+10:00) Brisbane</option>
+<option value="Australia/Hobart">(GMT+10:00) Hobart</option>
+<option value="Asia/Vladivostok">(GMT+10:00) Vladivostok</option>
+<option value="Australia/Lord_Howe">(GMT+10:30) Lord Howe Island</option>
+<option value="Etc/GMT-11">(GMT+11:00) Solomon Is., New Caledonia</option>
+<option value="Asia/Magadan">(GMT+11:00) Magadan</option>
+<option value="Pacific/Norfolk">(GMT+11:30) Norfolk Island</option>
+<option value="Asia/Anadyr">(GMT+12:00) Anadyr, Kamchatka</option>
+<option value="Pacific/Auckland">(GMT+12:00) Auckland, Wellington</option>
+<option value="Etc/GMT-12">(GMT+12:00) Fiji, Kamchatka, Marshall Is.</option>
+<option value="Pacific/Chatham">(GMT+12:45) Chatham Islands</option>
+<option value="Pacific/Tongatapu">(GMT+13:00) Nuku'alofa</option>
+<option value="Pacific/Kiritimati">(GMT+14:00) Kiritimati</option>
+</pre>
+<p>If anybody can offer any improvements to this or a different suggestion altogether, that would be great.</p>
+          </div>
+                              <p class="tags"><a href="http://www.aviblock.com/blog/tag/expression-engine/" rel="tag">Expression Engine</a>, <a href="http://www.aviblock.com/blog/tag/php/" rel="tag">php</a>, <a href="http://www.aviblock.com/blog/tag/timezones/" rel="tag">timezones</a>, <a href="http://www.aviblock.com/blog/tag/usability/" rel="tag">usability</a></p>
+          <div class="clear"></div>
+                    <p class="postmetadata alt">
+			<small>
+                This entry was posted on Thursday, March 12th, 2009 and is filed under <a href="http://www.aviblock.com/blog/category/programming/" title="View all posts in Programming" rel="category tag">Programming</a>. You can follow any responses to this entry through <a href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/feed/" title="RSS 2.0">RSS 2.0</a>.
+                You can <a href="#respond">leave a response</a>, or <a href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/trackback/" rel="trackback">trackback</a> from your own site.                            </small>
+		  </p>
+	   </div>
+    </div>
+	<div id="secondary-tabs">
+      <!-- comments and trackback tabs -->
+    <ul class="menu">
+      <li><a class="current" href="#tab-1"><span><span>Comments (16)</span></span></a></li>
+      <li><a href="#tab-2"><span><span>Trackbacks (0)</span></span></a></li>
+    </ul>
+    <!-- /comments and trackback tabs -->
+    <!-- comments -->
+  <div id="tab-1">
+   <ol id="comments">
+     <!-- comment entry -->
+	<li class="comment even thread-even depth-1 with-avatars" id="comment-2">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="0136c2f6147d850ee81cf1b780840a3a" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-2">#1</a> by <b id="commentauthor-2">ysth</b> at March 13th, 2009         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-2">
+          <p>Nice work.  One clarification: Olson timezones have historical changes back through much earlier than 1970, but they don’t create distinct timezones when the only differences were earlier than 1970.</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=2#respond" onclick='return addComment.moveForm("commentbody-2", "2", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-2', 'comment-2', 'commentbody-2', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+</li>
+ <!-- comment entry -->
+	<li class="comment odd alt thread-odd thread-alt depth-1 with-avatars" id="comment-22">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="cbbb7bc509912eb272955071db1fffd7" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-22">#2</a> by <a id="commentauthor-22" href="http://www.serverdensity.com/">David M</a> at May 25th, 2009         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-22">
+          <p>This is a bad way to do it because you’re mapping “static” timezones (e.g. (GMT)) to geographical locations (e.g. Europe/London) which have “dyanamic” times. PHP will use the time of the location which will change throughout the year when daylight savings comes into effect. Europe/London will be GMT for 6 months but for the other 6 months it will will be BST, which is GMT+1.</p>
+<p>For your list to be correct you have to use the actual “static” identifiers i.e. GMT, GMT+1, etc, as the option values.</p>
+<p>It is also extra work for the user who will need to switch DST on/off at the appropriate time. If you do it the way I did at <a href="http://blog.boxedice.com/2009/03/21/handling-timezone-conversion-with-php-datetime/" rel="nofollow">http://blog.boxedice.com/2009/03/21/handling-timezone-conversion-with-php-datetime/</a> then that will be handled automatically.</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=22#respond" onclick='return addComment.moveForm("commentbody-22", "22", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-22', 'comment-22', 'commentbody-22', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+<ul class="children">
+ <!-- comment entry -->
+	<li class="comment byuser comment-author-admin bypostauthor even depth-2 with-avatars" id="comment-23">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="777447906f773b19a9886d444cbb2401" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details admincomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-23">#3</a> by <b id="commentauthor-23">Avi</b> at May 25th, 2009         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-23">
+          <p>I think you misunderstood my post. I’m mapping the “friendly name” which people recognize, to the Olson name which PHP can handle. So somebody on the east coast of the US will see (GMT-05:00) Eastern Time (US &amp; Canada) and recognize that as their timezone. Meanwhile they get the “dynamic” identifier America/New_York stored in the database.  Of course now their DST will be handled automatically for them.</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=23#respond" onclick='return addComment.moveForm("commentbody-23", "23", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-23', 'comment-23', 'commentbody-23', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+<ul class="children">
+ <!-- comment entry -->
+	<li class="comment odd alt depth-3 with-avatars" id="comment-24">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="cbbb7bc509912eb272955071db1fffd7" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-24">#4</a> by <a id="commentauthor-24" href="http://www.serverdensity.com/">David M</a> at May 25th, 2009         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-24">
+          <p>I understand that if the user wants GMT -5 and they select that from your drop menu as “(GMT-05:00) Eastern Time (US &amp; Canada)”, that will map to “America/New_York”. However, New York is not always GMT -5. For example, it is currently GMT -4. This means your mapping is incorrect.</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=24#respond" onclick='return addComment.moveForm("commentbody-24", "24", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-24', 'comment-24', 'commentbody-24', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+<ul class="children">
+ <!-- comment entry -->
+	<li class="comment byuser comment-author-admin bypostauthor even depth-4 with-avatars" id="comment-25">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="777447906f773b19a9886d444cbb2401" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details admincomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-25">#5</a> by <b id="commentauthor-25">Avi</b> at May 25th, 2009         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-25">
+          <p>In my experience people do not think in DST terms. People on the East Coast of the united states do not think of their time in the summer as GMT -4…the think of it as GMT -5 plus one extra hour.<br>
+Either way, the important part of my list here is the friendly names…not the GMT offsets. The GMT offsets just provide a convenient way to list the timezones in an order that makes sense.<br>
+The important part is that the user can identify their timezone in a way that makes sense to them, and I can store it in a way that makes sense to me.</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=25#respond" onclick='return addComment.moveForm("commentbody-25", "25", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-25', 'comment-25', 'commentbody-25', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+ <!-- comment entry -->
+	<li class="comment odd alt thread-even depth-1 with-avatars" id="comment-76">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="7e5ce3c8df271b339133c3b5fea6355d" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-76">#6</a> by <a id="commentauthor-76" href="http://tacticmasters.com/">User_Friendly</a> at July 9th, 2009         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-76">
+          <p>Very Good work! I was looking throughout the net for TZ lists and Your beats all I’ve found! Thanks a lot!</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=76#respond" onclick='return addComment.moveForm("commentbody-76", "76", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-76', 'comment-76', 'commentbody-76', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+</li>
+ <!-- comment entry -->
+	<li class="comment even thread-odd thread-alt depth-1 with-avatars" id="comment-83">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="2e41e34da18ea3db9c237f1cbd366704" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-83">#7</a> by <a id="commentauthor-83" href="http://www.mxguarddog.com/">Robert Gunther</a> at July 15th, 2009         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-83">
+          <p>I like your list, will be using it on our website to allow users to set their timezone.</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=83#respond" onclick='return addComment.moveForm("commentbody-83", "83", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-83', 'comment-83', 'commentbody-83', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+</li>
+ <!-- comment entry -->
+	<li class="comment odd alt thread-even depth-1 with-avatars" id="comment-251">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="af266f29a0bf6c57843bf3a2396679b3" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-251">#8</a> by <b id="commentauthor-251">DC</b> at September 19th, 2009         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-251">
+          <p>Excellent. I’ve gone crazy looking for a similar human-friendly list. This is the only one so far.</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=251#respond" onclick='return addComment.moveForm("commentbody-251", "251", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-251', 'comment-251', 'commentbody-251', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+</li>
+ <!-- comment entry -->
+	<li class="comment even thread-odd thread-alt depth-1 with-avatars" id="comment-325">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="48aa29639c45e81001d2c2a86ced3d60" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-325">#9</a> by <a id="commentauthor-325" href="http://www.balancedlivingsystem.com/">Charles Himmer</a> at October 7th, 2009         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-325">
+          <p>Thanks for posting this.  I was looking all over for this and figured somebody had done this.</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=325#respond" onclick='return addComment.moveForm("commentbody-325", "325", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-325', 'comment-325', 'commentbody-325', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+</li>
+ <!-- comment entry -->
+	<li class="comment odd alt thread-even depth-1 with-avatars" id="comment-606">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="5940548c6f8c26537c1d953382f9ad0d" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-606">#10</a> by <a id="commentauthor-606" href="http://www.liquic.com/">John</a> at November 29th, 2009         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-606">
+          <p>Fantastic! Been searching for weeks for something like this. After a bunch of different options, I’ll see if I just use this one. If only you could automatically detect the user’s setting in Javascript. Presently, I only find selection boxes which have values like “+01:00, 1″ which can be automatically set by JS…</p>
+<p>Thanks<br>
+John</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=606#respond" onclick='return addComment.moveForm("commentbody-606", "606", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-606', 'comment-606', 'commentbody-606', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+</li>
+ <!-- comment entry -->
+	<li class="comment even thread-odd thread-alt depth-1 with-avatars" id="comment-845">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="af0346c192f27511ff03b78fc0239a4f" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-845">#11</a> by <b id="commentauthor-845">chris</b> at February 4th, 2010         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-845">
+          <p>This is great, but since it is statically generated, it must be manually updated in the future as boundaries may change.  What would be more interesting is a script that can generate the output you created.</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=845#respond" onclick='return addComment.moveForm("commentbody-845", "845", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-845', 'comment-845', 'commentbody-845', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+</li>
+ <!-- comment entry -->
+	<li class="comment odd alt thread-even depth-1 with-avatars" id="comment-980">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="80ccbbd78026c5a702a99369276d6bf6" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-980">#12</a> by <a id="commentauthor-980" href="http://www.quickschools.com/">Aris</a> at March 6th, 2010         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-980">
+          <p>Thanks! I too was looking for a shortened “human-friendly” list that’s similar to the drop-down in Google Calendar and this is the closest one.</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=980#respond" onclick='return addComment.moveForm("commentbody-980", "980", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-980', 'comment-980', 'commentbody-980', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+</li>
+ <!-- comment entry -->
+	<li class="comment even thread-odd thread-alt depth-1 with-avatars" id="comment-3650">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="addfef06fa283f34fa5fbfde6da10b03" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-3650">#13</a> by <b id="commentauthor-3650">Jay</b> at October 17th, 2010         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-3650">
+          <p>Thanks – this was very helpful. </p>
+<p>By the way, you have two entries for Kamchatka.</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=3650#respond" onclick='return addComment.moveForm("commentbody-3650", "3650", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-3650', 'comment-3650', 'commentbody-3650', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+</li>
+ <!-- comment entry -->
+	<li class="comment odd alt thread-even depth-1 with-avatars" id="comment-5451">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="f2c53ba0eb2f52d89b414951922b0606" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-5451">#14</a> by <a id="commentauthor-5451" href="http://nerdburn.com/">Shawn Adrian</a> at December 11th, 2010         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-5451">
+          <p>Thanks so much! Btw, I made it into an array, if anyone else would like to use it:</p>
+<p>        $list = array(<br>
+            ‘Pacific/Midway’ =&gt; ‘(GMT-11:00) Midway Island, Samoa’,<br>
+            ‘America/Adak’ =&gt; ‘(GMT-10:00) Hawaii-Aleutian’,<br>
+            ‘Etc/GMT+10′ =&gt; ‘(GMT-10:00) Hawaii’,<br>
+            ‘Pacific/Marquesas’ =&gt; ‘(GMT-09:30) Marquesas Islands’,<br>
+            ‘Pacific/Gambier’ =&gt; ‘(GMT-09:00) Gambier Islands’,<br>
+            ‘America/Anchorage’ =&gt; ‘(GMT-09:00) Alaska’,<br>
+            ‘America/Ensenada’ =&gt; ‘(GMT-08:00) Tijuana, Baja California’,<br>
+            ‘Etc/GMT+8′ =&gt; ‘(GMT-08:00) Pitcairn Islands’,<br>
+            ‘America/Los_Angeles’ =&gt; ‘(GMT-08:00) Pacific Time (US &amp; Canada)’,<br>
+            ‘America/Denver’ =&gt; ‘(GMT-07:00) Mountain Time (US &amp; Canada)’,<br>
+            ‘America/Chihuahua’ =&gt; ‘(GMT-07:00) Chihuahua, La Paz, Mazatlan’,<br>
+            ‘America/Dawson_Creek’ =&gt; ‘(GMT-07:00) Arizona’,<br>
+            ‘America/Belize’ =&gt; ‘(GMT-06:00) Saskatchewan, Central America’,<br>
+            ‘America/Cancun’ =&gt; ‘(GMT-06:00) Guadalajara, Mexico City, Monterrey’,<br>
+            ‘Chile/EasterIsland’ =&gt; ‘(GMT-06:00) Easter Island’,<br>
+            ‘America/Chicago’ =&gt; ‘(GMT-06:00) Central Time (US &amp; Canada)’,<br>
+            ‘America/New_York’ =&gt; ‘(GMT-05:00) Eastern Time (US &amp; Canada)’,<br>
+            ‘America/Havana’ =&gt; ‘(GMT-05:00) Cuba’,<br>
+            ‘America/Bogota’ =&gt; ‘(GMT-05:00) Bogota, Lima, Quito, Rio Branco’,<br>
+            ‘America/Caracas’ =&gt; ‘(GMT-04:30) Caracas’,<br>
+            ‘America/Santiago’ =&gt; ‘(GMT-04:00) Santiago’,<br>
+            ‘America/La_Paz’ =&gt; ‘(GMT-04:00) La Paz’,<br>
+            ‘Atlantic/Stanley’ =&gt; ‘(GMT-04:00) Faukland Islands’,<br>
+            ‘America/Campo_Grande’ =&gt; ‘(GMT-04:00) Brazil’,<br>
+            ‘America/Goose_Bay’ =&gt; ‘(GMT-04:00) Atlantic Time (Goose Bay)’,<br>
+            ‘America/Glace_Bay’ =&gt; ‘(GMT-04:00) Atlantic Time (Canada)’,<br>
+            ‘America/St_Johns’ =&gt; ‘(GMT-03:30) Newfoundland’,<br>
+            ‘America/Araguaina’ =&gt; ‘(GMT-03:00) UTC-3′,<br>
+            ‘America/Montevideo’ =&gt; ‘(GMT-03:00) Montevideo’,<br>
+            ‘America/Miquelon’ =&gt; ‘(GMT-03:00) Miquelon, St. Pierre’,<br>
+            ‘America/Godthab’ =&gt; ‘(GMT-03:00) Greenland’,<br>
+            ‘America/Argentina/Buenos_Aires’ =&gt; ‘(GMT-03:00) Buenos Aires’,<br>
+            ‘America/Sao_Paulo’ =&gt; ‘(GMT-03:00) Brasilia’,<br>
+            ‘America/Noronha’ =&gt; ‘(GMT-02:00) Mid-Atlantic’,<br>
+            ‘Atlantic/Cape_Verde’ =&gt; ‘(GMT-01:00) Cape Verde Is.’,<br>
+            ‘Atlantic/Azores’ =&gt; ‘(GMT-01:00) Azores’,<br>
+            ‘Europe/Belfast’ =&gt; ‘(GMT) Greenwich Mean Time : Belfast’,<br>
+            ‘Europe/Dublin’ =&gt; ‘(GMT) Greenwich Mean Time : Dublin’,<br>
+            ‘Europe/Lisbon’ =&gt; ‘(GMT) Greenwich Mean Time : Lisbon’,<br>
+            ‘Europe/London’ =&gt; ‘(GMT) Greenwich Mean Time : London’,<br>
+            ‘Africa/Abidjan’ =&gt; ‘(GMT) Monrovia, Reykjavik’,<br>
+            ‘Europe/Amsterdam’ =&gt; ‘(GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna’,<br>
+            ‘Europe/Belgrade’ =&gt; ‘(GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague’,<br>
+            ‘Europe/Brussels’ =&gt; ‘(GMT+01:00) Brussels, Copenhagen, Madrid, Paris’,<br>
+            ‘Africa/Algiers’ =&gt; ‘(GMT+01:00) West Central Africa’,<br>
+            ‘Africa/Windhoek’ =&gt; ‘(GMT+01:00) Windhoek’,<br>
+            ‘Asia/Beirut’ =&gt; ‘(GMT+02:00) Beirut’,<br>
+            ‘Africa/Cairo’ =&gt; ‘(GMT+02:00) Cairo’,<br>
+            ‘Asia/Gaza’ =&gt; ‘(GMT+02:00) Gaza’,<br>
+            ‘Africa/Blantyre’ =&gt; ‘(GMT+02:00) Harare, Pretoria’,<br>
+            ‘Asia/Jerusalem’ =&gt; ‘(GMT+02:00) Jerusalem’,<br>
+            ‘Europe/Minsk’ =&gt; ‘(GMT+02:00) Minsk’,<br>
+            ‘Asia/Damascus’ =&gt; ‘(GMT+02:00) Syria’,<br>
+            ‘Europe/Moscow’ =&gt; ‘(GMT+03:00) Moscow, St. Petersburg, Volgograd’,<br>
+            ‘Africa/Addis_Ababa’ =&gt; ‘(GMT+03:00) Nairobi’,<br>
+            ‘Asia/Tehran’ =&gt; ‘(GMT+03:30) Tehran’,<br>
+            ‘Asia/Dubai’ =&gt; ‘(GMT+04:00) Abu Dhabi, Muscat’,<br>
+            ‘Asia/Yerevan’ =&gt; ‘(GMT+04:00) Yerevan’,<br>
+            ‘Asia/Kabul’ =&gt; ‘(GMT+04:30) Kabul’,<br>
+            ‘Asia/Yekaterinburg’ =&gt; ‘(GMT+05:00) Ekaterinburg’,<br>
+            ‘Asia/Tashkent’ =&gt; ‘(GMT+05:00) Tashkent’,<br>
+            ‘Asia/Kolkata’ =&gt; ‘(GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi’,<br>
+            ‘Asia/Katmandu’ =&gt; ‘(GMT+05:45) Kathmandu’,<br>
+            ‘Asia/Dhaka’ =&gt; ‘(GMT+06:00) Astana, Dhaka’,<br>
+            ‘Asia/Novosibirsk’ =&gt; ‘(GMT+06:00) Novosibirsk’,<br>
+            ‘Asia/Rangoon’ =&gt; ‘(GMT+06:30) Yangon (Rangoon)’,<br>
+            ‘Asia/Bangkok’ =&gt; ‘(GMT+07:00) Bangkok, Hanoi, Jakarta’,<br>
+            ‘Asia/Krasnoyarsk’ =&gt; ‘(GMT+07:00) Krasnoyarsk’,<br>
+            ‘Asia/Hong_Kong’ =&gt; ‘(GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi’,<br>
+            ‘Asia/Irkutsk’ =&gt; ‘(GMT+08:00) Irkutsk, Ulaan Bataar’,<br>
+            ‘Australia/Perth’ =&gt; ‘(GMT+08:00) Perth’,<br>
+            ‘Australia/Eucla’ =&gt; ‘(GMT+08:45) Eucla’,<br>
+            ‘Asia/Tokyo’ =&gt; ‘(GMT+09:00) Osaka, Sapporo, Tokyo’,<br>
+            ‘Asia/Seoul’ =&gt; ‘(GMT+09:00) Seoul’,<br>
+            ‘Asia/Yakutsk’ =&gt; ‘(GMT+09:00) Yakutsk’,<br>
+            ‘Australia/Adelaide’ =&gt; ‘(GMT+09:30) Adelaide’,<br>
+            ‘Australia/Darwin’ =&gt; ‘(GMT+09:30) Darwin’,<br>
+            ‘Australia/Brisbane’ =&gt; ‘(GMT+10:00) Brisbane’,<br>
+            ‘Australia/Hobart’ =&gt; ‘(GMT+10:00) Hobart’,<br>
+            ‘Asia/Vladivostok’ =&gt; ‘(GMT+10:00) Vladivostok’,<br>
+            ‘Australia/Lord_Howe’ =&gt; ‘(GMT+10:30) Lord Howe Island’,<br>
+            ‘Etc/GMT-11′ =&gt; ‘(GMT+11:00) Solomon Is., New Caledonia’,<br>
+            ‘Asia/Magadan’ =&gt; ‘(GMT+11:00) Magadan’,<br>
+            ‘Pacific/Norfolk’ =&gt; ‘(GMT+11:30) Norfolk Island’,<br>
+            ‘Asia/Anadyr’ =&gt; ‘(GMT+12:00) Anadyr, Kamchatka’,<br>
+            ‘Pacific/Auckland’ =&gt; ‘(GMT+12:00) Auckland, Wellington’,<br>
+            ‘Etc/GMT-12′ =&gt; ‘(GMT+12:00) Fiji, Kamchatka, Marshall Is.’,<br>
+            ‘Pacific/Chatham’ =&gt; ‘(GMT+12:45) Chatham Islands’,<br>
+            ‘Pacific/Tongatapu’ =&gt; ‘(GMT+13:00) Nuku Alofa’,<br>
+            ‘Pacific/Kiritimati’ =&gt; ‘(GMT+14:00) Kiritimati’<br>
+        );</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=5451#respond" onclick='return addComment.moveForm("commentbody-5451", "5451", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-5451', 'comment-5451', 'commentbody-5451', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+</li>
+ <!-- comment entry -->
+	<li class="comment even thread-odd thread-alt depth-1 with-avatars" id="comment-6760">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="de00bd6f2d0300eb65544091834b4e51" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-6760">#15</a> by <b id="commentauthor-6760">Andrew Szczepanski</b> at January 20th, 2011         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-6760">
+          <p>This helped me out a ton, as well. For that I’ll pass it on – here’s my YAML contribution:</p>
+<p>TimeZone:<br>
+  pacific/midway:<br>
+		olson:  Pacific/Midway<br>
+		text:   Midway Island, Samoa<br>
+  america/adak:<br>
+		olson:  America/Adak<br>
+		text:   Hawaii-Aleutian<br>
+  etc/gmt+10:<br>
+		olson:  Etc/GMT+10<br>
+		text:   Hawaii<br>
+  pacific/marquesas:<br>
+		olson:  Pacific/Marquesas<br>
+		text:   Marquesas Islands<br>
+  pacific/gambier:<br>
+		olson:  Pacific/Gambier<br>
+		text:   Gambier Islands<br>
+  america/anchorage:<br>
+		olson:  America/Anchorage<br>
+		text:   Alaska<br>
+  america/ensenada:<br>
+		olson:  America/Ensenada<br>
+		text:   Tijuana, Baja California<br>
+  etc/gmt+8:<br>
+		olson:  Etc/GMT+8<br>
+		text:   Pitcairn Islands<br>
+  america/los_angeles:<br>
+		olson:  America/Los_Angeles<br>
+		text:   Pacific Time (US &amp; Canada)<br>
+  america/denver:<br>
+		olson:  America/Denver<br>
+		text:   Mountain Time (US &amp; Canada)<br>
+  america/chihuahua:<br>
+		olson:  America/Chihuahua<br>
+		text:   Chihuahua, La Paz, Mazatlan<br>
+  america/dawson_creek:<br>
+		olson:  America/Dawson_Creek<br>
+		text:   Arizona<br>
+  america/belize:<br>
+		olson:  America/Belize<br>
+		text:   Saskatchewan, Central America<br>
+  america/cancun:<br>
+		olson:  America/Cancun<br>
+		text:   Guadalajara, Mexico City, Monterrey<br>
+  chile/easterisland:<br>
+		olson:  Chile/EasterIsland<br>
+		text:   Easter Island<br>
+  america/chicago:<br>
+		olson:  America/Chicago<br>
+		text:   Central Time (US &amp; Canada)<br>
+  america/new_york:<br>
+		olson:  America/New_York<br>
+		text:   Eastern Time (US &amp; Canada)<br>
+  america/havana:<br>
+		olson:  America/Havana<br>
+		text:   Cuba<br>
+  america/bogota:<br>
+		olson:  America/Bogota<br>
+		text:   Bogota, Lima, Quito, Rio Branco<br>
+  america/caracas:<br>
+		olson:  America/Caracas<br>
+		text:   Caracas<br>
+  america/santiago:<br>
+		olson:  America/Santiago<br>
+		text:   Santiago<br>
+  america/la_paz:<br>
+		olson:  America/La_Paz<br>
+		text:   La Paz<br>
+  atlantic/stanley:<br>
+		olson:  Atlantic/Stanley<br>
+		text:   Faukland Islands<br>
+  america/campo_grande:<br>
+		olson:  America/Campo_Grande<br>
+		text:   Brazil<br>
+  america/goose_bay:<br>
+		olson:  America/Goose_Bay<br>
+		text:   Atlantic Time (Goose Bay)<br>
+  america/glace_bay:<br>
+		olson:  America/Glace_Bay<br>
+		text:   Atlantic Time (Canada)<br>
+  america/st_johns:<br>
+		olson:  America/St_Johns<br>
+		text:   Newfoundland<br>
+  america/araguaina:<br>
+		olson:  America/Araguaina<br>
+		text:   UTC-3<br>
+  america/montevideo:<br>
+		olson:  America/Montevideo<br>
+		text:   Montevideo<br>
+  america/miquelon:<br>
+		olson:  America/Miquelon<br>
+		text:   Miquelon, St. Pierre<br>
+  america/godthab:<br>
+		olson:  America/Godthab<br>
+		text:   Greenland<br>
+  america/argentina/buenos_aires:<br>
+		olson:  America/Argentina/Buenos_Aires<br>
+		text:   Buenos Aires<br>
+  america/sao_paulo:<br>
+		olson:  America/Sao_Paulo<br>
+		text:   Brasilia<br>
+  america/noronha:<br>
+		olson:  America/Noronha<br>
+		text:   Mid-Atlantic<br>
+  atlantic/cape_verde:<br>
+		olson:  Atlantic/Cape_Verde<br>
+		text:   Cape Verde Is.<br>
+  atlantic/azores:<br>
+		olson:  Atlantic/Azores<br>
+		text:   Azores<br>
+  europe/belfast:<br>
+		olson:  Europe/Belfast<br>
+		text:   Greenwich Mean Time : Belfast<br>
+  europe/dublin:<br>
+		olson:  Europe/Dublin<br>
+		text:   Greenwich Mean Time : Dublin<br>
+  europe/lisbon:<br>
+		olson:  Europe/Lisbon<br>
+		text:   Greenwich Mean Time : Lisbon<br>
+  europe/london:<br>
+		olson:  Europe/London<br>
+		text:   Greenwich Mean Time : London<br>
+  africa/abidjan:<br>
+		olson:  Africa/Abidjan<br>
+		text:   Monrovia, Reykjavik<br>
+  europe/amsterdam:<br>
+		olson:  Europe/Amsterdam<br>
+		text:   Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna<br>
+  europe/belgrade:<br>
+		olson:  Europe/Belgrade<br>
+		text:   Belgrade, Bratislava, Budapest, Ljubljana, Prague<br>
+  europe/brussels:<br>
+		olson:  Europe/Brussels<br>
+		text:   Brussels, Copenhagen, Madrid, Paris<br>
+  africa/algiers:<br>
+		olson:  Africa/Algiers<br>
+		text:   West Central Africa<br>
+  africa/windhoek:<br>
+		olson:  Africa/Windhoek<br>
+		text:   Windhoek<br>
+  asia/beirut:<br>
+		olson:  Asia/Beirut<br>
+		text:   Beirut<br>
+  africa/cairo:<br>
+		olson:  Africa/Cairo<br>
+		text:   Cairo<br>
+  asia/gaza:<br>
+		olson:  Asia/Gaza<br>
+		text:   Gaza<br>
+  africa/blantyre:<br>
+		olson:  Africa/Blantyre<br>
+		text:   Harare, Pretoria<br>
+  asia/jerusalem:<br>
+		olson:  Asia/Jerusalem<br>
+		text:   Jerusalem<br>
+  europe/minsk:<br>
+		olson:  Europe/Minsk<br>
+		text:   Minsk<br>
+  asia/damascus:<br>
+		olson:  Asia/Damascus<br>
+		text:   Syria<br>
+  europe/moscow:<br>
+		olson:  Europe/Moscow<br>
+		text:   Moscow, St. Petersburg, Volgograd<br>
+  africa/addis_ababa:<br>
+		olson:  Africa/Addis_Ababa<br>
+		text:   Nairobi<br>
+  asia/tehran:<br>
+		olson:  Asia/Tehran<br>
+		text:   Tehran<br>
+  asia/dubai:<br>
+		olson:  Asia/Dubai<br>
+		text:   Abu Dhabi, Muscat<br>
+  asia/yerevan:<br>
+		olson:  Asia/Yerevan<br>
+		text:   Yerevan<br>
+  asia/kabul:<br>
+		olson:  Asia/Kabul<br>
+		text:   Kabul<br>
+  asia/yekaterinburg:<br>
+		olson:  Asia/Yekaterinburg<br>
+		text:   Ekaterinburg<br>
+  asia/tashkent:<br>
+		olson:  Asia/Tashkent<br>
+		text:   Tashkent<br>
+  asia/kolkata:<br>
+		olson:  Asia/Kolkata<br>
+		text:   Chennai, Kolkata, Mumbai, New Delhi<br>
+  asia/katmandu:<br>
+		olson:  Asia/Katmandu<br>
+		text:   Kathmandu<br>
+  asia/dhaka:<br>
+		olson:  Asia/Dhaka<br>
+		text:   Astana, Dhaka<br>
+  asia/novosibirsk:<br>
+		olson:  Asia/Novosibirsk<br>
+		text:   Novosibirsk<br>
+  asia/rangoon:<br>
+		olson:  Asia/Rangoon<br>
+		text:   Yangon (Rangoon)<br>
+  asia/bangkok:<br>
+		olson:  Asia/Bangkok<br>
+		text:   Bangkok, Hanoi, Jakarta<br>
+  asia/krasnoyarsk:<br>
+		olson:  Asia/Krasnoyarsk<br>
+		text:   Krasnoyarsk<br>
+  asia/hong_kong:<br>
+		olson:  Asia/Hong_Kong<br>
+		text:   Beijing, Chongqing, Hong Kong, Urumqi<br>
+  asia/irkutsk:<br>
+		olson:  Asia/Irkutsk<br>
+		text:   Irkutsk, Ulaan Bataar<br>
+  australia/perth:<br>
+		olson:  Australia/Perth<br>
+		text:   Perth<br>
+  australia/eucla:<br>
+		olson:  Australia/Eucla<br>
+		text:   Eucla<br>
+  asia/tokyo:<br>
+		olson:  Asia/Tokyo<br>
+		text:   Osaka, Sapporo, Tokyo<br>
+  asia/seoul:<br>
+		olson:  Asia/Seoul<br>
+		text:   Seoul<br>
+  asia/yakutsk:<br>
+		olson:  Asia/Yakutsk<br>
+		text:   Yakutsk<br>
+  australia/adelaide:<br>
+		olson:  Australia/Adelaide<br>
+		text:   Adelaide<br>
+  australia/darwin:<br>
+		olson:  Australia/Darwin<br>
+		text:   Darwin<br>
+  australia/brisbane:<br>
+		olson:  Australia/Brisbane<br>
+		text:   Brisbane<br>
+  australia/hobart:<br>
+		olson:  Australia/Hobart<br>
+		text:   Hobart<br>
+  asia/vladivostok:<br>
+		olson:  Asia/Vladivostok<br>
+		text:   Vladivostok<br>
+  australia/lord_howe:<br>
+		olson:  Australia/Lord_Howe<br>
+		text:   Lord Howe Island<br>
+  etc/gmt-11:<br>
+		olson:  Etc/GMT-11<br>
+		text:   Solomon Is., New Caledonia<br>
+  asia/magadan:<br>
+		olson:  Asia/Magadan<br>
+		text:   Magadan<br>
+  pacific/norfolk:<br>
+		olson:  Pacific/Norfolk<br>
+		text:   Norfolk Island<br>
+  asia/anadyr:<br>
+		olson:  Asia/Anadyr<br>
+		text:   Anadyr, Kamchatka<br>
+  pacific/auckland:<br>
+		olson:  Pacific/Auckland<br>
+		text:   Auckland, Wellington<br>
+  etc/gmt-12:<br>
+		olson:  Etc/GMT-12<br>
+		text:   Fiji, Kamchatka, Marshall Is.<br>
+  pacific/chatham:<br>
+		olson:  Pacific/Chatham<br>
+		text:   Chatham Islands<br>
+  pacific/tongatapu:<br>
+		olson:  Pacific/Tongatapu<br>
+		text:   Nuku’alofa<br>
+  pacific/kiritimati:<br>
+		olson:  Pacific/Kiritimati<br>
+		text:   Kiritimati</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=6760#respond" onclick='return addComment.moveForm("commentbody-6760", "6760", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-6760', 'comment-6760', 'commentbody-6760', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+</li>
+ <!-- comment entry -->
+	<li class="comment odd alt thread-even depth-1 with-avatars" id="comment-6761">
+      <div class="wrap tiptrigger">
+              <div class="avatar">
+         <a class="gravatar"><img alt="" src="de00bd6f2d0300eb65544091834b4e51" class="avatar avatar-64 photo" height="64" width="64"></a>
+       </div>
+              <div class="details regularcomment">
+        <p class="head">
+         <span class="info">
+          <a href="#comment-6761">#16</a> by <b id="commentauthor-6761">Andrew Szczepanski</b> at January 20th, 2011         </span>
+        </p>
+        <!-- comment contents -->
+        <div class="text">
+		 		 <div id="commentbody-6761">
+          <p>Sorry, removed the GMT offsets from that, which isn’t good for usability. Updated it:</p>
+<p>TimeZone:<br>
+  pacific/midway:<br>
+    olson:  Pacific/Midway<br>
+    text:   (GMT-11:00) Midway Island, Samoa<br>
+  america/adak:<br>
+    olson:  America/Adak<br>
+    text:   (GMT-10:00) Hawaii-Aleutian<br>
+  etc/gmt+10:<br>
+    olson:  Etc/GMT+10<br>
+    text:   (GMT-10:00) Hawaii<br>
+  pacific/marquesas:<br>
+    olson:  Pacific/Marquesas<br>
+    text:   (GMT-09:30) Marquesas Islands<br>
+  pacific/gambier:<br>
+    olson:  Pacific/Gambier<br>
+    text:   (GMT-09:00) Gambier Islands<br>
+  america/anchorage:<br>
+    olson:  America/Anchorage<br>
+    text:   (GMT-09:00) Alaska<br>
+  america/ensenada:<br>
+    olson:  America/Ensenada<br>
+    text:   (GMT-08:00) Tijuana, Baja California<br>
+  etc/gmt+8:<br>
+    olson:  Etc/GMT+8<br>
+    text:   (GMT-08:00) Pitcairn Islands<br>
+  america/los_angeles:<br>
+    olson:  America/Los_Angeles<br>
+    text:   (GMT-08:00) Pacific Time (US &amp; Canada)<br>
+  america/denver:<br>
+    olson:  America/Denver<br>
+    text:   (GMT-07:00) Mountain Time (US &amp; Canada)<br>
+  america/chihuahua:<br>
+    olson:  America/Chihuahua<br>
+    text:   (GMT-07:00) Chihuahua, La Paz, Mazatlan<br>
+  america/dawson_creek:<br>
+    olson:  America/Dawson_Creek<br>
+    text:   (GMT-07:00) Arizona<br>
+  america/belize:<br>
+    olson:  America/Belize<br>
+    text:   (GMT-06:00) Saskatchewan, Central America<br>
+  america/cancun:<br>
+    olson:  America/Cancun<br>
+    text:   (GMT-06:00) Guadalajara, Mexico City, Monterrey<br>
+  chile/easterisland:<br>
+    olson:  Chile/EasterIsland<br>
+    text:   (GMT-06:00) Easter Island<br>
+  america/chicago:<br>
+    olson:  America/Chicago<br>
+    text:   (GMT-06:00) Central Time (US &amp; Canada)<br>
+  america/new_york:<br>
+    olson:  America/New_York<br>
+    text:   (GMT-05:00) Eastern Time (US &amp; Canada)<br>
+  america/havana:<br>
+    olson:  America/Havana<br>
+    text:   (GMT-05:00) Cuba<br>
+  america/bogota:<br>
+    olson:  America/Bogota<br>
+    text:   (GMT-05:00) Bogota, Lima, Quito, Rio Branco<br>
+  america/caracas:<br>
+    olson:  America/Caracas<br>
+    text:   (GMT-04:30) Caracas<br>
+  america/santiago:<br>
+    olson:  America/Santiago<br>
+    text:   (GMT-04:00) Santiago<br>
+  america/la_paz:<br>
+    olson:  America/La_Paz<br>
+    text:   (GMT-04:00) La Paz<br>
+  atlantic/stanley:<br>
+    olson:  Atlantic/Stanley<br>
+    text:   (GMT-04:00) Faukland Islands<br>
+  america/campo_grande:<br>
+    olson:  America/Campo_Grande<br>
+    text:   (GMT-04:00) Brazil<br>
+  america/goose_bay:<br>
+    olson:  America/Goose_Bay<br>
+    text:   (GMT-04:00) Atlantic Time (Goose Bay)<br>
+  america/glace_bay:<br>
+    olson:  America/Glace_Bay<br>
+    text:   (GMT-04:00) Atlantic Time (Canada)<br>
+  america/st_johns:<br>
+    olson:  America/St_Johns<br>
+    text:   (GMT-03:30) Newfoundland<br>
+  america/araguaina:<br>
+    olson:  America/Araguaina<br>
+    text:   (GMT-03:00) UTC-3<br>
+  america/montevideo:<br>
+    olson:  America/Montevideo<br>
+    text:   (GMT-03:00) Montevideo<br>
+  america/miquelon:<br>
+    olson:  America/Miquelon<br>
+    text:   (GMT-03:00) Miquelon, St. Pierre<br>
+  america/godthab:<br>
+    olson:  America/Godthab<br>
+    text:   (GMT-03:00) Greenland<br>
+  america/argentina/buenos_aires:<br>
+    olson:  America/Argentina/Buenos_Aires<br>
+    text:   (GMT-03:00) Buenos Aires<br>
+  america/sao_paulo:<br>
+    olson:  America/Sao_Paulo<br>
+    text:   (GMT-03:00) Brasilia<br>
+  america/noronha:<br>
+    olson:  America/Noronha<br>
+    text:   (GMT-02:00) Mid-Atlantic<br>
+  atlantic/cape_verde:<br>
+    olson:  Atlantic/Cape_Verde<br>
+    text:   (GMT-01:00) Cape Verde Is.<br>
+  atlantic/azores:<br>
+    olson:  Atlantic/Azores<br>
+    text:   (GMT-01:00) Azores<br>
+  europe/belfast:<br>
+    olson:  Europe/Belfast<br>
+    text:   (GMT) Greenwich Mean Time : Belfast<br>
+  europe/dublin:<br>
+    olson:  Europe/Dublin<br>
+    text:   (GMT) Greenwich Mean Time : Dublin<br>
+  europe/lisbon:<br>
+    olson:  Europe/Lisbon<br>
+    text:   (GMT) Greenwich Mean Time : Lisbon<br>
+  europe/london:<br>
+    olson:  Europe/London<br>
+    text:   (GMT) Greenwich Mean Time : London<br>
+  africa/abidjan:<br>
+    olson:  Africa/Abidjan<br>
+    text:   (GMT) Monrovia, Reykjavik<br>
+  europe/amsterdam:<br>
+    olson:  Europe/Amsterdam<br>
+    text:   (GMT+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna<br>
+  europe/belgrade:<br>
+    olson:  Europe/Belgrade<br>
+    text:   (GMT+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague<br>
+  europe/brussels:<br>
+    olson:  Europe/Brussels<br>
+    text:   (GMT+01:00) Brussels, Copenhagen, Madrid, Paris<br>
+  africa/algiers:<br>
+    olson:  Africa/Algiers<br>
+    text:   (GMT+01:00) West Central Africa<br>
+  africa/windhoek:<br>
+    olson:  Africa/Windhoek<br>
+    text:   (GMT+01:00) Windhoek<br>
+  asia/beirut:<br>
+    olson:  Asia/Beirut<br>
+    text:   (GMT+02:00) Beirut<br>
+  africa/cairo:<br>
+    olson:  Africa/Cairo<br>
+    text:   (GMT+02:00) Cairo<br>
+  asia/gaza:<br>
+    olson:  Asia/Gaza<br>
+    text:   (GMT+02:00) Gaza<br>
+  africa/blantyre:<br>
+    olson:  Africa/Blantyre<br>
+    text:   (GMT+02:00) Harare, Pretoria<br>
+  asia/jerusalem:<br>
+    olson:  Asia/Jerusalem<br>
+    text:   (GMT+02:00) Jerusalem<br>
+  europe/minsk:<br>
+    olson:  Europe/Minsk<br>
+    text:   (GMT+02:00) Minsk<br>
+  asia/damascus:<br>
+    olson:  Asia/Damascus<br>
+    text:   (GMT+02:00) Syria<br>
+  europe/moscow:<br>
+    olson:  Europe/Moscow<br>
+    text:   (GMT+03:00) Moscow, St. Petersburg, Volgograd<br>
+  africa/addis_ababa:<br>
+    olson:  Africa/Addis_Ababa<br>
+    text:   (GMT+03:00) Nairobi<br>
+  asia/tehran:<br>
+    olson:  Asia/Tehran<br>
+    text:   (GMT+03:30) Tehran<br>
+  asia/dubai:<br>
+    olson:  Asia/Dubai<br>
+    text:   (GMT+04:00) Abu Dhabi, Muscat<br>
+  asia/yerevan:<br>
+    olson:  Asia/Yerevan<br>
+    text:   (GMT+04:00) Yerevan<br>
+  asia/kabul:<br>
+    olson:  Asia/Kabul<br>
+    text:   (GMT+04:30) Kabul<br>
+  asia/yekaterinburg:<br>
+    olson:  Asia/Yekaterinburg<br>
+    text:   (GMT+05:00) Ekaterinburg<br>
+  asia/tashkent:<br>
+    olson:  Asia/Tashkent<br>
+    text:   (GMT+05:00) Tashkent<br>
+  asia/kolkata:<br>
+    olson:  Asia/Kolkata<br>
+    text:   (GMT+05:30) Chennai, Kolkata, Mumbai, New Delhi<br>
+  asia/katmandu:<br>
+    olson:  Asia/Katmandu<br>
+    text:   (GMT+05:45) Kathmandu<br>
+  asia/dhaka:<br>
+    olson:  Asia/Dhaka<br>
+    text:   (GMT+06:00) Astana, Dhaka<br>
+  asia/novosibirsk:<br>
+    olson:  Asia/Novosibirsk<br>
+    text:   (GMT+06:00) Novosibirsk<br>
+  asia/rangoon:<br>
+    olson:  Asia/Rangoon<br>
+    text:   text:   (GMT+06:30) Yangon (Rangoon)<br>
+  asia/bangkok:<br>
+    olson:  Asia/Bangkok<br>
+    (GMT+07:00) Bangkok, Hanoi, Jakarta<br>
+  asia/krasnoyarsk:<br>
+    olson:  Asia/Krasnoyarsk<br>
+    text:   (GMT+07:00) Krasnoyarsk<br>
+  asia/hong_kong:<br>
+    olson:  Asia/Hong_Kong<br>
+    text:   (GMT+08:00) Beijing, Chongqing, Hong Kong, Urumqi<br>
+  asia/irkutsk:<br>
+    olson:  Asia/Irkutsk<br>
+    text:   (GMT+08:00) Irkutsk, Ulaan Bataar<br>
+  australia/perth:<br>
+    olson:  Australia/Perth<br>
+    text:   (GMT+08:00) Perth<br>
+  australia/eucla:<br>
+    olson:  Australia/Eucla<br>
+    text:   (GMT+08:45) Eucla<br>
+  asia/tokyo:<br>
+    olson:  Asia/Tokyo<br>
+    text:   (GMT+09:00) Osaka, Sapporo, Tokyo<br>
+  asia/seoul:<br>
+    olson:  Asia/Seoul<br>
+    text:   (GMT+09:00) Seoul<br>
+  asia/yakutsk:<br>
+    olson:  Asia/Yakutsk<br>
+    text:   (GMT+09:00) Yakutsk<br>
+  australia/adelaide:<br>
+    olson:  Australia/Adelaide<br>
+    text:   (GMT+09:30) Adelaide<br>
+  australia/darwin:<br>
+    olson:  Australia/Darwin<br>
+    text:   (GMT+09:30) Darwin<br>
+  australia/brisbane:<br>
+    olson:  Australia/Brisbane<br>
+    text:   (GMT+10:00) Brisbane<br>
+  australia/hobart:<br>
+    olson:  Australia/Hobart<br>
+    text:   (GMT+10:00) Hobart<br>
+  asia/vladivostok:<br>
+    olson:  Asia/Vladivostok<br>
+    text:   (GMT+10:00) Vladivostok<br>
+  australia/lord_howe:<br>
+    olson:  Australia/Lord_Howe<br>
+    text:   (GMT+10:30) Lord Howe Island<br>
+  etc/gmt-11:<br>
+    olson:  Etc/GMT-11<br>
+    text:   (GMT+11:00) Solomon Is., New Caledonia<br>
+  asia/magadan:<br>
+    olson:  Asia/Magadan<br>
+    text:   (GMT+11:00) Magadan<br>
+  pacific/norfolk:<br>
+    olson:  Pacific/Norfolk<br>
+    text:   (GMT+11:30) Norfolk Island<br>
+  asia/anadyr:<br>
+    olson:  Asia/Anadyr<br>
+    text:   (GMT+12:00) Anadyr, Kamchatka<br>
+  pacific/auckland:<br>
+    olson:  Pacific/Auckland<br>
+    text:   (GMT+12:00) Auckland, Wellington<br>
+  etc/gmt-12:<br>
+    olson:  Etc/GMT-12<br>
+    text:   (GMT+12:00) Fiji, Kamchatka, Marshall Is.<br>
+  pacific/chatham:<br>
+    olson:  Pacific/Chatham<br>
+    text:   (GMT+12:45) Chatham Islands<br>
+  pacific/tongatapu:<br>
+    olson:  Pacific/Tongatapu<br>
+    text:   (GMT+13:00) Nuku’alofa<br>
+  pacific/kiritimati:<br>
+    olson:  Pacific/Kiritimati<br>
+    text:   (GMT+14:00) Kiritimati</p>
+         </div>
+       </div>
+       <!-- /comment contents -->
+       </div>
+          	   <div class="act tip">
+	     <span class="button reply"><a rel="nofollow" class="comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/?replytocom=6761#respond" onclick='return addComment.moveForm("commentbody-6761", "6761", "respond", "3")'><span><span>Reply</span></span></a></span> <span class="button quote"><a title="Quote" href="javascript:void(0);" onclick="MGJS_CMT.quote('commentauthor-6761', 'comment-6761', 'commentbody-6761', 'comment');"><span><span>Quote</span></span></a></span>
+	   </div>
+              <span class="editlink"></span>
+      </div>
+</li>
+    </ol>
+        
+      <div id="respond">
+      <form action="http://www.aviblock.com/blog/wp-comments-post.php" method="post" id="commentform" name="tcommentform">
+        <div class="cancel-comment-reply"><a rel="nofollow" id="cancel-comment-reply-link" href="http://www.aviblock.com/blog/2009/03/12/presenting-a-list-of-timezones-to-the-user/#respond" style="display: none;">Cancel Reply</a></div>
+          	                <div id="author_info">
+            <div class="row">
+              <input name="author" id="author" class="textfield" value="" size="24" tabindex="1" type="text">
+              <label for="author" class="small">Name (required)</label>
+            </div>
+            <div class="row">
+              <input name="email" id="email" class="textfield" value="" size="24" tabindex="2" type="text">
+              <label for="email" class="small">E-Mail (required)</label> <em>(will not be published)</em>
+            </div>
+            <div class="row">
+              <input name="url" id="url" class="textfield" value="" size="24" tabindex="3" type="text">
+              <label for="url" class="small">Website</label>
+            </div>
+  		  </div>
+                  
+        <!-- comment input -->
+        <div class="row">
+        	<textarea name="comment" id="comment" tabindex="4" rows="8" cols="50"></textarea>
+        	        	<input name="comment_post_ID" value="3" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+        </div>
+        <!-- /comment input -->
+
+        <!-- comment submit and rss -->
+        <div id="submitbox" class="left">
+         <span class="button submit"><a title="Submit Comment" href="javascript:document.tcommentform.submit();"><span><span>Submit Comment</span></span></a></span>
+         <input name="formInput" type="hidden">
+        </div>
+        <div class="clear"></div>
+      </form>
+    </div>
+          </div>
+  <!-- /comments -->
+
+    <!-- trackbacks -->
+  <div style="display: none;" id="tab-2">
+    <ol id="trackbacks">
+            <li>No trackbacks yet.</li>
+         </ol>
+  </div>
+  <!-- /trackbacks -->
+  
+</div>
+
+   </div>
+    <!-- mid content -->
+   </div>
+   <!-- /mid -->
+
+   <!-- sidebar -->
+<div id="sidebar">
+ <!-- sidebar 1st container -->
+ <div id="sidebar-wrap1">
+  <!-- sidebar 2nd container -->
+  <div id="sidebar-wrap2">
+     <ul id="sidelist">
+                <li>
+          
+<!-- search form -->
+
+<div id="searchtab">
+  <div class="inside">
+    <form method="get" id="searchform" action="http://www.aviblock.com/blog/">
+      <input name="s" id="searchbox" class="searchfield" value="Search" onfocus="if(this.value == 'Search') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search';}" type="text">
+       <input value="Go" class="searchbutton" type="submit">
+    </form>
+  </div>
+</div>
+
+<!-- /search form -->		</li>
+        		
+                <li>
+          <!-- sidebar menu (categories) -->
+          <ul class="nav">
+            	<li class="cat-item cat-item-11"><a href="http://www.aviblock.com/blog/category/miscellanious/" title="View all posts filed under Miscellanious"><span>Miscellanious</span></a><a class="rss tip" href="http://www.aviblock.com/blog/category/miscellanious/feed/"></a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://www.aviblock.com/blog/category/programming/" title="View all posts filed under Programming"><span>Programming</span></a><a class="rss tip" href="http://www.aviblock.com/blog/category/programming/feed/"></a>
+</li>
+
+            
+          </ul>
+          <!-- /sidebar menu -->
+        </li>
+        
+
+                <li id="linkcat-2" class="linkcat"><h2>Blogroll</h2>
+	<ul class="xoxo blogroll">
+<li><a href="http://wordpress.org/development/">Development Blog</a></li>
+<li><a href="http://codex.wordpress.org/">Documentation</a></li>
+<li><a href="http://wordpress.org/extend/plugins/">Plugins</a></li>
+<li><a href="http://wordpress.org/extend/ideas/">Suggest Ideas</a></li>
+<li><a href="http://wordpress.org/support/">Support Forum</a></li>
+<li><a href="http://wordpress.org/extend/themes/">Themes</a></li>
+<li><a href="http://planet.wordpress.org/">WordPress Planet</a></li>
+
+	</ul>
+</li>
+        <li class="box-wrap" id="box-archives">
+          <div class="box">
+           <h2 class="title">Archives</h2>
+           <div class="inside">
+            <ul>
+             	<li><a href="http://www.aviblock.com/blog/2011/05/" title="May 2011">May 2011</a>&nbsp;(1)</li>
+	<li><a href="http://www.aviblock.com/blog/2011/02/" title="February 2011">February 2011</a>&nbsp;(1)</li>
+	<li><a href="http://www.aviblock.com/blog/2010/06/" title="June 2010">June 2010</a>&nbsp;(1)</li>
+	<li><a href="http://www.aviblock.com/blog/2010/04/" title="April 2010">April 2010</a>&nbsp;(1)</li>
+	<li><a href="http://www.aviblock.com/blog/2010/02/" title="February 2010">February 2010</a>&nbsp;(1)</li>
+	<li><a href="http://www.aviblock.com/blog/2010/01/" title="January 2010">January 2010</a>&nbsp;(1)</li>
+	<li><a href="http://www.aviblock.com/blog/2009/12/" title="December 2009">December 2009</a>&nbsp;(2)</li>
+	<li><a href="http://www.aviblock.com/blog/2009/11/" title="November 2009">November 2009</a>&nbsp;(1)</li>
+	<li><a href="http://www.aviblock.com/blog/2009/10/" title="October 2009">October 2009</a>&nbsp;(1)</li>
+	<li><a href="http://www.aviblock.com/blog/2009/08/" title="August 2009">August 2009</a>&nbsp;(1)</li>
+	<li><a href="http://www.aviblock.com/blog/2009/07/" title="July 2009">July 2009</a>&nbsp;(1)</li>
+	<li><a href="http://www.aviblock.com/blog/2009/05/" title="May 2009">May 2009</a>&nbsp;(2)</li>
+	<li><a href="http://www.aviblock.com/blog/2009/03/" title="March 2009">March 2009</a>&nbsp;(3)</li>
+            </ul>
+           </div>
+          </div>
+        </li>
+
+        <li class="box-wrap" id="box-meta">
+          <div class="box">
+           <h2 class="title">Meta</h2>
+           <div class="inside">
+            <ul>
+                          <li><a href="http://www.aviblock.com/blog/wp-login.php">Log in</a></li>
+             <li><a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional">Valid <abbr title="eXtensible HyperText Markup Language">XHTML</abbr></a></li>
+             <li><a href="http://gmpg.org/xfn/"><abbr title="XHTML Friends Network">XFN</abbr></a></li>
+             <li><a href="http://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress</a></li>
+                         </ul>
+           </div>
+          </div>
+        </li>
+             </ul>
+  </div>
+  <!-- /sidebar 2nd container -->
+ </div>
+ <!-- /sidebar 1st container -->
+</div>
+<!-- /sidebar -->
+
+
+  </div>
+  <!-- /side wrap -->
+ </div>
+ <!-- /mid column wrap -->
+</div>
+<!-- /main wrapper -->
+
+<!-- clear main & sidebar sections -->
+<div class="clearcontent"></div>
+<!-- /clear main & sidebar sections -->
+
+<!-- footer -->
+ <div id="footer">
+   <!-- please do not remove this. respect the authors :) -->
+   <p>
+    Fusion theme by <a href="http://digitalnature.ro/projects/fusion">digitalnature</a> | powered by <a href="http://wordpress.org/">WordPress</a>    <br>
+   <a class="rss" href="http://www.aviblock.com/blog/feed/">Entries (RSS)</a> and <a href="http://www.aviblock.com/blog/comments/feed/">Comments (RSS)</a> <a href="#" id="toplink">^</a>
+   <!-- 18 queries. 0.457 seconds. -->
+   </p>
+ </div>
+ <!-- /footer -->
+  <div id="layoutcontrol">
+   <a href="javascript:void(0);" class="setFont" title="Increase/Decrease text size"><span>SetTextSize</span></a>
+   <a href="javascript:void(0);" class="setLiquid" title="Switch between full and fixed width"><span>SetPageWidth</span></a>
+ </div>
+ </div>
+<!-- /page -->
+
+</div>
+</div>
+<!-- /page wrappers -->
+
+
+
+
+</body>
+</html>

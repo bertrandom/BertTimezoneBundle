@@ -1,0 +1,39 @@
+body { background: none repeat scroll 0% 0% rgb(255, 255, 255); font-size: 11px; font-family: "lucida grande",tahoma,verdana,arial,sans-serif; color: rgb(51, 51, 51); line-height: 1.28; margin: 0pt; padding: 0pt; text-align: left; direction: ltr; unicode-bidi: embed; }
+a { cursor: pointer; color: rgb(59, 89, 152); text-decoration: none; }
+a:hover { text-decoration: underline; }
+td, td.label { font-size: 11px; text-align: left; }
+.clearfix:after { clear: both; content: "."; display: block; font-size: 0pt; height: 0pt; line-height: 0; visibility: hidden; }
+.clearfix {  }
+#facebook .hidden_elem { display: none ! important; }
+body.plugin { background: none repeat scroll 0% 0% transparent; overflow-y: visible; }
+body.transparent_widget { background-color: transparent; overflow: hidden; }
+body.plugin.transparent_widget { overflow-y: hidden; }
+.connect_widget { background-color: transparent; }
+.connect_widget .connect_widget_interactive_area { border-collapse: collapse; }
+.connect_widget td.connect_widget_vertical_center { border-spacing: 0pt; font-size: 11px; line-height: normal; padding: 0pt; }
+.connect_widget td.connect_widget_button_cell { vertical-align: top; }
+.connect_widget td.connect_widget_confirm_cell { padding-top: 4px; }
+.connect_widget .connect_button_slider { position: relative; }
+a.connect_widget_like_button { display: block; float: left; border-radius: 3px 3px 3px 3px; padding: 4px 5px; border: 1px solid rgb(0, 0, 0); }
+.button_count a.connect_widget_like_button { padding: 2px 4px; }
+a.connect_widget_like_button span { line-height: 14px; }
+a.connect_widget_like_button:hover { text-decoration: none; }
+.connect_widget_button_count_count { background: none repeat scroll 0% 0% rgb(239, 239, 239); border: 1px solid rgb(193, 193, 193); float: left; font-weight: normal; height: 14px; margin-left: 1px; min-width: 15px; padding: 1px 2px; text-align: center; line-height: 14px; }
+.connect_widget_button_count_nub { float: left; position: relative; z-index: 2; height: 0pt; width: 5px; top: -5px; left: 2px; }
+.connect_widget_button_count_nub s, .connect_widget_button_count_nub i { border-style: solid; border-color: transparent rgb(199, 199, 199) transparent transparent; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; border-width: 5px 5px 0pt 0pt; display: block; position: relative; }
+.connect_widget_button_count_nub i { left: 2px; top: -6px; border-right-color: rgb(239, 239, 239); }
+td.connect_widget_button_count_excluding { padding: 0pt; }
+td.connect_widget_button_count_including, td.connect_widget_simple_including { padding: 0pt; }
+.connect_widget_like_button .liketext { background: url('ql9vukdcc4r.png') no-repeat scroll -1px -33px transparent; color: rgb(59, 89, 152); display: block; padding-left: 17px; white-space: nowrap; }
+.button_count .like_button_dark .like_button_no_like .liketext, .button_count .connect_widget_like_button .liketext { background-position: -1px -47px; }
+.connect_widget .like_button_no_like .piece, .connect_widget .like_button_no_like { background-color: rgb(236, 238, 245); border-color: rgb(202, 212, 231); }
+.connect_widget a.like_button_no_like:hover .piece, .connect_widget a.like_button_no_like:hover { background-color: rgb(235, 237, 244); border-color: rgb(157, 172, 206); }
+.connect_widget_like_button .liketext { background: url('ql9vukdcc4r.png') no-repeat scroll -1px -33px transparent; }
+.connect_widget a.like_button_no_like:hover .piece, .connect_widget a.like_button_no_like:hover { background-color: rgb(236, 238, 245); border-color: rgb(157, 172, 206); }
+.connect_widget .tombstone_cross { background: url('ql9vukdcc4r.png') no-repeat scroll 0pt -128px transparent; display: block; float: left; height: 12px; margin-right: 3px; width: 14px; z-index: 99; }
+.like_button_no_like .tombstone_cross { display: none; }
+/* ::::: http://static.ak.fbcdn.net/rsrc.php/v1/yJ/r/xd4AtB7vAKP.css ::::: */
+
+.mrm { margin-right: 10px; }
+.uiGrid { border: 0pt none; border-collapse: collapse; border-spacing: 0pt; }
+.uiButton input::-moz-focus-inner { border: 0pt none; padding: 0pt; }

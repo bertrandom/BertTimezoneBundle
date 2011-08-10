@@ -1,0 +1,157 @@
+/* ::::: http://www.aviblock.com/blog/wp-content/themes/fusion/style.css ::::: */
+
+* { margin: 0pt; padding: 0pt; }
+html, body { height: 100%; }
+html { font-size: 100%; }
+body { font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Helvetica,Sans,FreeSans,Jamrul,Garuda,Kalimati; font-size: 0.8em; font-style: normal; color: rgb(0, 0, 0); background: url('main-bg.gif') repeat-x scroll left 200px rgb(255, 255, 255); min-height: 100%; height: auto ! important; position: relative; }
+a { color: rgb(45, 131, 213); text-decoration: underline; }
+a:hover { color: rgb(255, 255, 255); background: none repeat scroll 0% 0% rgb(45, 131, 213); text-decoration: none; }
+img { border: 0pt none; }
+p { line-height: 140%; margin: 0.4em 0pt 1em; }
+input, textarea, select { font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Helvetica,Sans,FreeSans,Jamrul,Garuda,Kalimati; font-size: 100%; margin: 0.2em 0pt; background: url('input-bg.png') no-repeat scroll left top transparent; }
+input, textarea { padding: 0.2em 0.4em; }
+form label { font-weight: bold; }
+small { font-size: 86%; }
+pre { overflow: auto; background: none repeat scroll 0% 0% rgb(238, 238, 238); padding: 0.4em; }
+ul, ol { margin: 0.4em 0pt 1em; line-height: 150%; }
+ul li, ol li { list-style-position: outside; margin-left: 2em; }
+h1 { font-size: 250%; margin: 0.6em 0pt 0.3em; font-weight: bold; letter-spacing: -0.06em; }
+h2 { font-family: "Palatino Linotype",Georgia,"Tahoma","Century Schoolbook L",Arial,Helvetica; font-size: 200%; font-weight: normal; margin: 0.6em 0pt 0.3em; }
+#page-wrap1 { background: url('header-bg.jpg') repeat-x scroll left top transparent; }
+#page-wrap2 { background: url('header-center.jpg') no-repeat scroll center top transparent; height: 200px; width: 100%; display: block; }
+#page { width: 960px; min-width: 780px; margin: 0pt auto; }
+#main-wrap { position: relative; clear: both; float: left; width: 100%; }
+#mid-wrap, #side-wrap { float: left; width: 100%; position: relative; }
+#mid, #sidebar, #sidebar2 { float: left; position: relative; padding: 0pt; overflow: visible; }
+#page #main-wrap #mid-wrap { right: 100%; }
+#page #main-wrap #side-wrap { right: 0pt; }
+#page #main-wrap #mid { width: 100%; left: 100%; }
+#page.with-sidebar #main-wrap #mid-wrap { right: 0%; }
+#page.with-sidebar #main-wrap #side-wrap { right: 66%; }
+#page.with-sidebar #main-wrap #mid { width: 66%; left: 66%; }
+#page.with-sidebar #main-wrap #sidebar { width: 34%; left: 66%; }
+#mid-content { margin: 40px 0pt 10px; }
+#sidebar-wrap1 { background: url('side-start.png') no-repeat scroll left top transparent; padding-left: 28px; margin-top: 36px; height: 100%; }
+#sidebar-wrap2 { background: url('side-bg.png') no-repeat scroll right top transparent; padding-right: 30px; padding-top: 40px; height: 100%; min-height: 400px; }
+div.clearcontent { clear: left; }
+#header { height: 200px; z-index: 2; position: relative; }
+#header h1 { font-family: "Trajan Pro","Lucida Sans Unicode",Arial,Helvetica,Sans,FreeSans,Jamrul,Garuda,Kalimati; font-weight: bold; position: absolute; color: rgb(255, 255, 255); top: 85px; font-size: 3.4em; letter-spacing: -0.06em; margin: 0pt; padding: 0pt; }
+#header h1 a { color: rgb(255, 255, 255); text-decoration: none; }
+#header h1 a:hover { background: none repeat scroll 0% 0% transparent; color: rgb(45, 131, 213); }
+#topnav { color: rgb(162, 163, 166); padding-top: 20px; }
+#tabs { font-size: 14px; width: 100%; line-height: normal; position: absolute; bottom: 0pt; left: 0pt; z-index: 0; }
+#tabs ul { list-style: none outside none; }
+#tabs li { display: inline; float: left; position: relative; margin: 0pt; padding: 0pt; }
+#tabs a { float: left; background: url('tab-left.png') no-repeat scroll left top transparent; padding-left: 9px; margin-right: 3px; text-decoration: none; color: rgb(207, 207, 207); cursor: pointer; }
+#tabs a span { float: left; display: block; background: url('tab-right.png') no-repeat scroll right top transparent; height: 29px; padding-right: 10px; }
+#tabs a span span { display: block; background: none repeat scroll 0% 0% transparent; height: auto; padding: 4px 4px 0pt; }
+#tabs a span { float: none; }
+#tabs a:hover span { color: rgb(207, 207, 207); }
+#tabs a:hover, #tabs li:hover a { background-position: 0% -29px; color: rgb(255, 255, 255); }
+#tabs a:hover span, #tabs li:hover a span { background-position: 100% -29px; color: rgb(255, 255, 255); }
+#tabs ul li:hover { z-index: 100; }
+#mid ul.menu { font-size: 14px; height: 35px; line-height: normal; left: 0pt; padding-left: 12px; background: url('mtab-bg.png') repeat-x scroll left bottom transparent; margin: 10px 0pt 20px; list-style: none outside none; }
+#mid ul.menu li { display: inline; float: left; margin: 0pt; padding: 0pt; }
+#mid ul.menu a { float: left; background: url('mtab-left.png') no-repeat scroll left -35px transparent; padding-left: 6px; margin-right: 3px; text-decoration: none; text-transform: uppercase; color: rgb(140, 139, 139); cursor: pointer; }
+#mid ul.menu a span { float: left; display: block; background: url('mtab-right.png') no-repeat scroll right -35px transparent; height: 35px; padding-right: 6px; }
+#mid ul.menu a span span { display: block; background: none repeat scroll 0% 0% transparent; height: auto; padding: 7px 10px 0pt; }
+#mid ul.menu a span { float: none; }
+#mid ul.menu a:hover span { color: rgb(207, 207, 207); }
+#mid ul.menu a:hover { background-position: 0% -70px; color: rgb(255, 255, 255); }
+#mid ul.menu a:hover span { background-position: 100% -70px; color: rgb(255, 255, 255); }
+#mid ul.menu a.active, #mid ul.menu a.current { background-position: 0% 0px; color: rgb(237, 33, 36); }
+#mid ul.menu a.active span, #mid ul.menu a.current span { background-position: 100% 0px; color: rgb(237, 33, 36); }
+#mid #tab-2, #mid #tab-3, #mid #tab-4, #mid #tab-5, #mid #tab-6, #mid #tab-7, #mid #tab-8, #mid #tab-9 { display: none; }
+.story, .post, .attachment { background: url('div-h2.gif') repeat-x scroll left 8px transparent; padding-top: 0.6em; margin: 0pt 0pt 2.8em; display: block; position: relative; min-width: 0pt; }
+#mid .story h2, #mid .post h2, #mid .attachment h2 { margin: 0pt; }
+.story .postbody, .post .postbody, .attachment .postbody { clear: left; display: block; }
+.story p.tags, .post .tags, .attachment p.postcontrols { float: left; display: block; padding-left: 19px; margin: 0pt; background: url('post-icons.png') no-repeat scroll 0pt top transparent; }
+ol#comments, ol#comments li, ol#trackbacks, ol#trackbacks li { list-style-type: none; padding: 0pt; margin: 0pt; }
+ol#comments ul.children, ol#trackbacks ul.children { margin: 0pt; padding: 0pt; }
+li.comment { background: url('comment-div-bg.png') repeat-y scroll left bottom transparent; list-style-position: outside; display: block; position: relative; min-height: 110px; }
+li.comment .wrap { background: url('comment-div-start.png') no-repeat scroll left top transparent; min-height: 110px; height: auto ! important; }
+li.comment.with-avatars { background-position: 96px bottom; }
+li.comment.with-avatars .wrap { background-position: 96px top; }
+li.comment .avatar { float: left; width: auto ! important; padding-top: 6px; padding-left: 8px; }
+li.comment .avatar img { padding: 3px; margin: 4px 10px; border: 1px solid rgb(231, 232, 230); border-radius: 4px 4px 4px 4px; }
+li.comment .details { display: block; margin-left: 12px; }
+li.comment.with-avatars .details { margin-left: 108px; }
+li.comment .details .head { background: url('postinfo-bg.gif') repeat-x scroll left bottom rgb(247, 248, 248); padding: 2px 10px; margin: 0pt; display: block; color: rgb(143, 144, 144); }
+li.comment .details.admincomment .head { background: url('postinfo-bg-admin.gif') repeat-x scroll left bottom rgb(89, 178, 228); color: rgb(255, 255, 255); }
+li.comment .details.admincomment .head a { color: rgb(255, 255, 255); }
+li.comment .details.admincomment .head a:hover { background: none repeat scroll 0% 0% transparent; color: rgb(252, 183, 34); }
+li.comment .details .text { background: url('comment-bg.png') repeat-x scroll left top transparent; padding: 0.3em 0.8em; margin-top: 3px; min-height: 64px; font-size: 90%; color: rgb(78, 83, 89); }
+li.comment .details.admincomment .text { background: url('comment-bg-admin.png') repeat-x scroll left top rgb(240, 240, 240); }
+div.act { position: absolute; display: none; right: 0pt; top: 0pt; margin-top: 50px; font-size: 110%; text-transform: uppercase; }
+span.button a { background: url('button-bg.png') no-repeat scroll right top transparent; display: block; height: 31px; float: left; margin-right: 3px; cursor: pointer; }
+span.button a span { float: left; height: 31px; display: block; padding: 0pt 10px 0pt 25px; }
+span.quote a span { background: url('button-quote.png') no-repeat scroll left top transparent; }
+span.reply a span { background: url('button-reply.png') no-repeat scroll left top transparent; }
+span.submit a span { background: url('button-submit.png') no-repeat scroll left top transparent; }
+span.button a span span { background: none repeat scroll 0% 0% transparent; display: block; padding: 6px 10px 0px; height: auto; }
+span.button a:hover { background-position: right bottom; }
+span.button a:hover span { background-position: left bottom; }
+#sidebar h2.title, #sidebar2 h2.title { font-family: "Lucida Grande","Lucida Sans Unicode",Arial,Helvetica,Sans,FreeSans,Jamrul,Garuda,Kalimati; font-weight: normal; text-transform: uppercase; font-size: 130%; }
+#sidebar ul, #sidebar2 ul { margin: 0pt; padding: 0pt; }
+#sidebar ul li, #sidebar2 ul li { list-style-type: none; line-height: 140%; margin: 0pt; padding: 0pt; display: block; list-style-position: outside; }
+#sidebar ul.nav { margin: 1em 0pt 2em; padding: 0pt; }
+#sidebar ul.nav li { list-style-type: none; background: url('div-h.gif') repeat-x scroll left bottom transparent; padding: 2px 0pt 3px; margin: 0pt; position: relative; }
+#sidebar ul.nav li a { background: none repeat scroll 0% 0% transparent; display: block; text-decoration: none; text-transform: uppercase; font-size: 110%; padding: 3px 27px 3px 8px; color: rgb(0, 0, 0); cursor: pointer; }
+#sidebar ul.nav li a:hover { background: url('side-nav-bg.png') repeat-y scroll right top rgb(239, 239, 238); color: rgb(237, 33, 36); }
+#sidebar ul.nav li a span { background: url('b1.png') no-repeat scroll left 3px transparent; padding-left: 17px; display: block; }
+#sidebar ul.nav li a:hover span { background-position: left -97px; color: rgb(237, 33, 36); }
+#sidebar ul.nav li a.rss { background: url('side-nav-rss.gif') no-repeat scroll left top transparent; display: none; width: 26px; position: absolute; height: 13px; right: 0pt; padding: 0pt 4px 0pt 0pt; margin-top: 2px; top: 0pt; text-decoration: none; cursor: pointer; z-index: 5; }
+#sidebar ul.nav li a.rss:hover { background-position: 0px -13px; }
+#sidebar .box, #sidebar2 .box { margin: 16px 0pt 2px; }
+#sidebar .box h2.title, #sidebar2 .box h2.title { background: url('side-box-top.png') no-repeat scroll left bottom transparent; padding: 4px 0pt 4px 20px; color: rgb(141, 139, 139); margin: 20px 0pt 0pt; }
+#sidebar .box ul, #sidebar2 .box ul { background: url('side-box-bg.png') repeat-y scroll left bottom transparent; padding: 10px 20px; display: block; }
+#sidebar .box ul li, #sidebar2 .box ul li { line-height: 150%; }
+#searchtab { background: url('search-bg.png') no-repeat scroll left top transparent; height: 40px; position: relative; }
+#searchtab .inside { background: url('search-go.png') no-repeat scroll right top transparent; height: 40px; }
+#searchtab input { border: 0pt none; background: none repeat scroll 0% 0% transparent; font-size: 12px; padding: 0px; }
+#searchtab input.searchfield, #searchtab input#s { position: absolute; top: 6px; left: 46px; color: rgb(148, 148, 150); padding: 0px; margin: 0pt; width: 50%; }
+#searchtab input.searchfield:focus, #searchtab input#s:focus { color: rgb(0, 0, 0); }
+#searchtab input.searchbutton, #searchtab input#searchsubmit { position: absolute; right: 37px; top: 6px; color: rgb(229, 229, 229); text-transform: uppercase; padding: 0px; margin: 0pt; }
+#searchtab input.searchbutton:hover { color: rgb(255, 255, 255); }
+#footer { background: url('div-h2.gif') repeat-x scroll left top transparent; padding: 20px 0pt; margin-top: 2em; width: 100%; text-align: center; }
+#footer a#toplink { text-decoration: none; padding: 0pt 0.6em; }
+#layoutcontrol { position: absolute; top: 10px; right: 20px; display: block; width: 74px; height: 16px; z-index: 1000; }
+#layoutcontrol a { float: left; display: block; width: 16px; height: 16px; margin-right: 3px; background: url('pagecontrols.png') no-repeat scroll left top transparent; }
+#layoutcontrol a.setLiquid { background-position: -50px top; }
+#layoutcontrol a.setFont { background-position: left top; width: 25px; }
+#layoutcontrol a.setLiquid:hover { background-position: right top; }
+#layoutcontrol a.setFont:hover { background-position: -25px top; }
+#layoutcontrol a span { display: none; }
+.left { float: left; }
+div.clear { clear: both; height: 1px; }
+.clearfix:after { content: "."; display: block; height: 0pt; clear: both; visibility: hidden; }
+.clearfix { min-width: 0pt; display: block; }
+#sidebar li.linkcat li, #sidebar2 li.linkcat li, .widget.widget_links ul li, .widget.widget_meta ul li, .widget.widget_categories ul li, .widget.widget_archive ul li, .widget.widget_pages ul li, .widget.widget_recent_entries ul li { background: url('b3.gif') no-repeat scroll left 6px transparent; }
+#sidebar li.linkcat a, #sidebar2 li.linkcat a, .widget.widget_links ul li a, .widget.widget_meta ul li a, .widget.widget_categories ul li a, .widget.widget_archive ul li a, .widget.widget_pages ul li a, .widget.widget_recent_entries ul li a { color: rgb(139, 139, 137); text-decoration: none; margin-left: 10px; display: inline-block; }
+#sidebar li.linkcat a:hover, #sidebar2 li.linkcat a:hover, .widget.widget_links ul li a:hover, .widget.widget_meta ul li a:hover, .widget.widget_categories ul li a:hover, .widget.widget_archive ul li a:hover, .widget.widget_pages ul li a:hover, .widget.widget_recent_entries ul li a:hover { color: rgb(237, 31, 36); background: none repeat scroll 0% 0% transparent; text-decoration: underline; }
+.post .postbody img, .attachment img, .navigation .alignleft img, .navigation .alignright img { padding: 3px; margin: 4px 10px; border: 1px solid rgb(231, 232, 230); border-radius: 4px 4px 4px 4px; }
+.wp-caption { background: none repeat scroll 0% 0% rgb(247, 247, 247); border: 1px solid rgb(231, 232, 230); border-radius: 4px 4px 4px 4px; padding-top: 5px; margin: 4px 10px; text-align: center; color: rgb(141, 139, 139); }
+.wp-caption img, .post .postbody .wp-caption img, .attachment .wp-caption img { margin: 0pt; border: 0pt none; padding: 0pt; }
+.navigation { font-size: 80%; color: rgb(196, 195, 193); margin: 0pt; padding: 0pt; }
+.navigation a { text-decoration: none; color: rgb(210, 208, 207); }
+.navigation a:hover { background: none repeat scroll 0% 0% transparent; color: rgb(237, 31, 36); }
+.postmetadata { color: rgb(196, 195, 193); margin: 1em 0pt; }
+.postmetadata a { color: rgb(146, 146, 146); }
+.postmetadata a:hover { background: none repeat scroll 0% 0% transparent; color: rgb(237, 31, 36); }
+span.editlink { position: absolute; right: 10px; top: 5px; }
+#footer a.rss, a.rsssubscribe { background: url('rss.png') no-repeat scroll left 50% transparent; padding-left: 18px; }
+#footer a.rss:hover, a.rsssubscribe:hover { background: url('rss.png') no-repeat scroll left 50% rgb(45, 131, 213); }
+#commentform { display: block; background: url('div-h2.gif') repeat-x scroll left 0px transparent; padding: 6px 0pt 0pt; margin: 20px 0pt; }
+#commentform textarea { margin-bottom: 6px; }
+ol#comments li.comment.depth-2, ol#comments li.comment.depth-3, ol#comments li.comment.depth-4, ol#comments li.comment.depth-5, ol#comments li.comment.depth-6, ol#comments li.comment.depth-7, ol#comments li.comment.depth-8, ol#comments li.comment.depth-9 { margin-left: 14px; }
+ol#comments li.comment.with-avatars.depth-2, ol#comments li.comment.with-avatars.depth-3, ol#comments li.comment.with-avatars.depth-4, ol#comments li.comment.with-avatars.depth-5, ol#comments li.comment.with-avatars.depth-6, ol#comments li.comment.with-avatars.depth-7, ol#comments li.comment.with-avatars.depth-8, ol#comments li.comment.with-avatars.depth-9 { margin-left: 96px; }
+.alignleft { float: left; }
+.alignright { float: right; }
+/* ::::: http://www.aviblock.com/blog/wp-content/plugins/codecolorer/codecolorer.css?ver=0.9.9 ::::: */
+
+.railscasts *::-moz-selection, .railscasts .codecolorer *::-moz-selection { background: none repeat scroll 0% 0% rgb(86, 99, 129); }
+/* ::::: http://www.aviblock.com/blog/wp-content/plugins/nextgen-gallery/css/nggallery.css?ver=1.0.0 ::::: */
+
+/* ::::: http://www.aviblock.com/blog/wp-content/plugins/nextgen-gallery/shutter/shutter-reloaded.css?ver=1.3.0 ::::: */
+
+body { height: 100%; }

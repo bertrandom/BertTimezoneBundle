@@ -1,0 +1,13 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0pt; padding: 0pt; border: 0pt none; outline: 0pt none; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; line-height: inherit; }
+:focus { outline: 0pt none; }
+html { margin: 0pt; padding: 0pt; height: 100%; }
+body { font-size: 13px; height: 100%; background-color: transparent; margin: 0pt; padding: 0pt; }
+div#comment, textarea { font-size: 13px; background: none repeat scroll 0% 0% transparent; }
+div#comment.placeholder, textarea.placeholder { color: rgb(102, 102, 102); }
+button::-moz-focus-inner { border: 0pt none; }
+@media not all {
+}
+@media not all {
+}
+html, body, form, textarea { outline: 0pt none; margin: 0pt; padding: 0pt; height: 99%; width: 100%; }
+div#comment { overflow-y: auto; word-wrap: break-word; }
