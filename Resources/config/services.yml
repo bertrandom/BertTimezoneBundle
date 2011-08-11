@@ -1,9 +1,10 @@
-parameters:
-    bert.timezone.default: 'America/Los_Angeles'
+imports:
+    timezone_dump:
+        resource: timezones.yml
 
 services:
-    bert.timezone.twig.extension:
-        class: Bert\TimezoneBundle\Extension\TimezoneTwigExtension
-        arguments: [%bert.timezone.default%]
+    bert.timezone.form.type.readabletimezone:
+        class: Bert\TimezoneBundle\Form\ReadableTimezoneType
+        arguments: [%bert.timezones.timezone_data%]
         tags:
-            -  { name: twig.extension }
+            - { name: form.type, alias: readabletimezone }
