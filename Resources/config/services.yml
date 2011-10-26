@@ -8,3 +8,6 @@ services:
         arguments: [%bert.timezones.timezone_data%]
         tags:
             - { name: form.type, alias: readabletimezone }
+    bert.timezone.twitter.lookup:
+        class: Bert\TimezoneBundle\Services\TwitterTimezoneLookup
+        arguments: [%bert.timezones.twitter_lookup_data%]

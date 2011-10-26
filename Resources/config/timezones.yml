@@ -90,3 +90,145 @@ parameters:
         Pacific/Chatham: '(GMT+12:45) Chatham Islands'
         Pacific/Tongatapu: '(GMT+13:00) Nuku Alofa'
         Pacific/Kiritimati: '(GMT+14:00) Kiritimati'
+    bert.timezones.twitter_lookup_data:
+        Hawaii: Etc/GMT+10
+        Alaska: America/Anchorage
+        'Pacific Time (US & Canada)': America/Los_Angeles
+        Arizona: America/Dawson_Creek
+        'Mountain Time (US & Canada)': America/Denver
+        'Central Time (US & Canada)': America/Chicago
+        'Eastern Time (US & Canada)': America/New_York
+        'Indiana (East)': America/New_York
+        'International Date Line West': Pacific/Midway
+        'Midway Island': Pacific/Midway
+        Samoa: Pacific/Midway
+        Tijuana: America/Ensenada
+        Chihuahua: America/Chihuahua
+        Mazatlan: America/Chihuahua
+        'Central America': America/Belize
+        Guadalajara: America/Cancun
+        'Mexico City': America/Cancun
+        Monterrey: America/Cancun
+        Saskatchewan: America/Belize
+        Bogota: America/Bogota
+        Lima: America/Bogota
+        Quito: America/Bogota
+        Caracas: America/Caracas
+        'Atlantic Time (Canada)': America/Glace_Bay
+        'La Paz': America/La_Paz
+        Santiago: America/Santiago
+        Newfoundland: America/St_Johns
+        Brasilia: America/Sao_Paulo
+        'Buenos Aires': America/Argentina/Buenos_Aires
+        Georgetown: America/Argentina/Buenos_Aires
+        Greenland: America/Godthab
+        Mid-Atlantic: America/Noronha
+        Azores: Atlantic/Azores
+        'Cape Verde Is.': Atlantic/Cape_Verde
+        Casablanca: Europe/Belfast
+        Dublin: Europe/Dublin
+        Edinburgh: Europe/Belfast
+        Lisbon: Europe/Lisbon
+        London: Europe/London
+        Monrovia: Africa/Abidjan
+        Amsterdam: Europe/Amsterdam
+        Belgrade: Europe/Belgrade
+        Berlin: Europe/Amsterdam
+        Bern: Europe/Amsterdam
+        Bratislava: Europe/Belgrade
+        Brussels: Europe/Brussels
+        Budapest: Europe/Belgrade
+        Copenhagen: Europe/Brussels
+        Ljubljana: Europe/Belgrade
+        Madrid: Europe/Brussels
+        Paris: Europe/Brussels
+        Prague: Europe/Belgrade
+        Rome: Europe/Amsterdam
+        Sarajevo: Europe/Belgrade
+        Skopje: Europe/Belgrade
+        Stockholm: Europe/Amsterdam
+        Vienna: Europe/Amsterdam
+        Warsaw: Europe/Belgrade
+        'West Central Africa': Africa/Algiers
+        Zagreb: Africa/Algiers
+        Athens: Africa/Cairo
+        Bucharest: Africa/Cairo
+        Cairo: Africa/Cairo
+        Harare: Africa/Blantyre
+        Helsinki: Africa/Cairo
+        Istanbul: Africa/Cairo
+        Jerusalem: Asia/Jerusalem
+        Kyiv: Africa/Cairo
+        Minsk: Europe/Minsk
+        Pretoria: Africa/Blantyre
+        Riga: Africa/Cairo
+        Sofia: Africa/Cairo
+        Tallinn: Africa/Cairo
+        Vilnius: Africa/Cairo
+        Baghdad: Europe/Moscow
+        Kuwait: Europe/Moscow
+        Moscow: Europe/Moscow
+        Nairobi: Africa/Addis_Ababa
+        Riyadh: Europe/Moscow
+        'St. Petersburg': Europe/Moscow
+        Volgograd: Europe/Moscow
+        Tehran: Asia/Tehran
+        'Abu Dhabi': Asia/Dubai
+        Baku: Asia/Dubai
+        Muscat: Asia/Dubai
+        Tbilisi: Asia/Dubai
+        Yerevan: Asia/Yerevan
+        Kabul: Asia/Kabul
+        Ekaterinburg: Asia/Yekaterinburg
+        Islamabad: Asia/Yekaterinburg
+        Karachi: Asia/Yekaterinburg
+        Tashkent: Asia/Tashkent
+        Chennai: Asia/Kolkata
+        Kolkata: Asia/Kolkata
+        Mumbai: Asia/Kolkata
+        'New Delhi': Asia/Kolkata
+        Kathmandu: Asia/Katmandu
+        Almaty: Asia/Dhaka
+        Astana: Asia/Dhaka
+        Dhaka: Asia/Dhaka
+        Novosibirsk: Asia/Novosibirsk
+        'Sri Jayawardenepura': Asia/Dhaka
+        Rangoon: Asia/Rangoon
+        Bangkok: Asia/Bangkok
+        Hanoi: Asia/Bangkok
+        Jakarta: Asia/Bangkok
+        Krasnoyarsk: Asia/Krasnoyarsk
+        Beijing: Asia/Hong_Kong
+        Chongqing: Asia/Hong_Kong
+        'Hong Kong': Asia/Hong_Kong
+        Irkutsk: Asia/Irkutsk
+        'Kuala Lumpur': Asia/Hong_Kong
+        Perth: Australia/Perth
+        Singapore: Asia/Hong_Kong
+        Taipei: Asia/Hong_Kong
+        'Ulaan Bataar': Asia/Irkutsk
+        Urumqi: Asia/Hong_Kong
+        Osaka: Asia/Tokyo
+        Sapporo: Asia/Tokyo
+        Seoul: Asia/Seoul
+        Tokyo: Asia/Tokyo
+        Yakutsk: Asia/Yakutsk
+        Adelaide: Australia/Adelaide
+        Darwin: Australia/Darwin
+        Brisbane: Australia/Brisbane
+        Canberra: Australia/Brisbane
+        Guam: Australia/Brisbane
+        Hobart: Australia/Hobart
+        Melbourne: Australia/Brisbane
+        'Port Moresby': Australia/Brisbane
+        Sydney: Australia/Brisbane
+        Vladivostok: Asia/Vladivostok
+        Magadan: Asia/Magadan
+        'New Caledonia': Etc/GMT-11
+        'Solomon Is.': Etc/GMT-11
+        Auckland: Pacific/Auckland
+        Fiji: Etc/GMT-12
+        Kamchatka: Etc/GMT-12
+        'Marshall Is.': Etc/GMT-12
+        Wellington: Pacific/Auckland
+        'Nuku''alofa': Pacific/Tongatapu
