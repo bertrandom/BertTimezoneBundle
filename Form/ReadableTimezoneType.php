@@ -37,7 +37,7 @@ class ReadableTimezoneType extends TimezoneType
     /**
      * {@inheritdoc}
      */
-    public function getParent(array $options)
+    public function getParent()
     {
         return 'choice';
     }
