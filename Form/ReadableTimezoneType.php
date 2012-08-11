@@ -12,6 +12,7 @@
 namespace Bert\TimezoneBundle\Form;
 
 use Symfony\Component\Form\Extension\Core\Type\TimezoneType as TimezoneType;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
 class ReadableTimezoneType extends TimezoneType
 {
@@ -27,11 +28,11 @@ class ReadableTimezoneType extends TimezoneType
     /**
      * {@inheritdoc}
      */
-    public function getDefaultOptions(array $options)
+    public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
-        return array(
-            'choice_list' => new ReadableTimezoneChoiceList($this->timezones_data),
-        );
+        $resolver->setDefaults(array(
+            'choices' => $this->timezones_data,
+        ));
     }
 
     /**
