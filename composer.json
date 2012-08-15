@@ -1,0 +1,25 @@
+{
+    "name": "bertrandom/timezone-bundle",
+    "type": "symfony-bundle",
+    "description": "Readable Timezone Field Type for Symfony2",
+    "keywords": ["timezone", "form", "type", "Symfony2"],
+    "homepage": "https://github.com/bertrandom/BertTimezoneBundle",
+    "license": "MIT",
+	"version": "1.0.0",
+    "authors": [
+		{
+			"name": "bertrandom (Bertrand Fan)",
+			"email": "bertrand@fan.net"
+		}
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "symfony/framework-bundle": "2.1.*"
+    },
+    "autoload": {
+        "psr-0": { 
+			"Bert\\TimezoneBundle": ""
+		}
+    },
+    "target-dir": "bert/TimezoneBundle"
+}
